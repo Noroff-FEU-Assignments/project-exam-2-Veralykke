@@ -3,11 +3,15 @@ import Nav from "react-bootstrap/Nav";
 import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Home from "../home/Home";
-import Hotels from "../hotels/Hotels";
+import HotelList from "../hotels/HotelList";
+import HotelDetail from "../hotels/HotelDetail";
 import Contact from "../contact/Contact";
+//import LoginPage from "../login/LoginPage";
+//import { AuthProvider } from "./context/AuthContext";
 
 function Layout() {
 	return (
+		//<AuthProvider>
 		<Router>
 		<Navbar bg="light" variant="light" expand="lg">
 			<Navbar.Brand href="/">Holidaze</Navbar.Brand>
@@ -23,11 +27,13 @@ function Layout() {
 		<Container>
 		<Switch>
 			<Route path="/" exact component={Home} />
-			<Route path="/hotels" component={Hotels} />
+			<Route path="/hotels" component={HotelList} />
+			<Route path="/hotels/detail/:id" component={HotelDetail} />
 			<Route path="/contact" component={Contact} />
 		</Switch>
 	</Container>
 </Router>
+//</AuthProvider>
 	);
 }
 
