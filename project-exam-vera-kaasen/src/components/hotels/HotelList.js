@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { API } from "../../constants/api.js";
+import HotelItem from "../hotels/HotelItem";
 //import Heading from "../layout/Heading";
 
 
@@ -7,7 +8,7 @@ function HotelList() {
 	const [hotels, setHotels] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
-
+	
 	useEffect(function () {
 		async function fetchData() {
 			try {
