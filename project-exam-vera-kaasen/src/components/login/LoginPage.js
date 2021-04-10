@@ -1,5 +1,5 @@
-/*import Heading from "../layout/Heading";
-import LoginForm from "./LoginForm";
+import Heading from "../layout/Heading";
+import LoginForm from "../login/loginForm" 
 
 export default function LoginPage() {
     return (
@@ -8,4 +8,4 @@ export default function LoginPage() {
         <LoginForm />
         </>
     )
-};*/
+};

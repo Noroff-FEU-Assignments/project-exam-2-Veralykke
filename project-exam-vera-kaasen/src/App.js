@@ -1,14 +1,14 @@
 import React from "react";
-import './App.scss';
+import "./App.scss";
 import Layout from "./components/layout/Layout";
-
+import LoginPage from "./components/login/LoginPage";
 
 function App() {
-  return ( 
+  return (
     <>
-    <Layout />
+      <Layout />
     </>
-  )
+  );
 }
 
 export default App;
