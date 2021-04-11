@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { API } from "../../constants/api.js";
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+import Figure from "react-bootstrap/Figure";
+import Button from "react-bootstrap/Button";
 
 function HotelDetail() {
   const [hotel, setHotel] = useState(null);
@@ -15,8 +18,7 @@ function HotelDetail() {
     history.push("/");
   }
 
-  const url = API + "/" + id;
-  //const url = API + "pages?_embed";
+  const url = API + "/" + id + "pages?_embed";
 
   useEffect(
     function () {
@@ -51,9 +53,20 @@ function HotelDetail() {
   }
 
   return (
-    <div className="hotel-detail">
-      <h1>{hotel.slug}</h1>
-    </div>
+    <Figure>
+      <Figure.Image
+        width={171}
+        height={180}
+        alt="171x180"
+        src="holder.js/171x180"
+      />
+      <Figure.Caption>
+        <div className="hotel-detail">
+          <h1>{hotel.slug}</h1>
+        </div>
+        <Button type="submit">Submit</Button>
+      </Figure.Caption>
+    </Figure>
   );
 }
 

@@ -7,6 +7,8 @@ import HotelList from "../hotels/HotelList";
 import HotelDetail from "../hotels/HotelDetail";
 import Contact from "../contact/Contact";
 import Login from "../login/LoginPage";
+import Admin from "../admin/Admin";
+import Booking from "../booking/Booking";
 //import LoginPage from "../login/LoginPage";
 //import { AuthProvider } from "./context/AuthContext";
 
@@ -33,6 +35,9 @@ function Layout() {
           <Route path="/hotels/:id" component={HotelDetail} />
           <Route path="/contact" component={Contact} />
           <Route path="/login" component={Login} />
+          <Route path="/Admin" component={Admin} />
+          <Route path="/Booking" component={Booking} />
+
         </Switch>
       </Container>
     </Router>
