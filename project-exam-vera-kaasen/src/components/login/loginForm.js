@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
 import { API, TOKEN_PATH } from "../../constants/api";
+import Heading from "../layout/Heading";
 
 const url = API + TOKEN_PATH;
 
@@ -41,6 +42,7 @@ export default function LoginForm() {
 
   return (
     <>
+      <Heading title="Login to Admin" />
       <Form>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
