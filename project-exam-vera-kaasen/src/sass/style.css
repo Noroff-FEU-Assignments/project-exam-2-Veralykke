@@ -1,4 +1,38 @@
-/*@import "partials/layout";
-@import "partials/typography";
-@import "partials/base";*/
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #FCFCFC;
+}
+
+h1 {
+  color: #FFD651;
+}
+
+p {
+  color: #d81818;
+}
+
+.social-container {
+  background: #FCFCFC;
+  padding: 25px 50px;
+}
+
+a.social {
+  margin: 0 1rem;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  display: inline-block;
+}
+
+a.social :hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+a.facebook,
+a.instagram,
+a.twitter {
+  color: black;
+}
 /*# sourceMappingURL=style.css.map */
