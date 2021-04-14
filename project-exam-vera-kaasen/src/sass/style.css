@@ -1,10 +1,12 @@
 body {
-  font-family: "Open Sans", sans-serif;
-  background-color: #FCFCFC;
+  background: #FCFCFC !important;
+  font-family: "Open Sans", sans-serif !important;
+  color: #191919 !important;
 }
 
 h1 {
-  color: #FFD651;
+  font-size: 1.5rem !important;
+  margin: 2rem 0 2rem 0 !important;
 }
 
 p {
@@ -12,8 +14,9 @@ p {
 }
 
 .social-container {
-  background: #FCFCFC;
+  background-color: #FCFCFC !important;
   padding: 25px 50px;
+  text-align: center;
 }
 
 a.social {
@@ -25,14 +28,55 @@ a.social {
   display: inline-block;
 }
 
-a.social :hover {
+a.social:hover {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }
 
 a.facebook,
 a.instagram,
-a.twitter {
-  color: black;
+a.twitter,
+a.nav-link {
+  color: #191919;
+}
+
+.link-footer {
+  margin: 1rem !important;
+  padding: 25px;
+}
+
+button {
+  background: #FFD651 !important;
+  border: #FFD651 !important;
+  color: #191919 !important;
+  padding: 4px 16px !important;
+}
+
+button.navbar-toggler.collapsed {
+  background: #FCFCFC !important;
+}
+
+button.navbar-toggler {
+  background: #FCFCFC !important;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  background: #FCFCFC !important;
+}
+
+.card-body {
+  border-radius: 35px !important;
+}
+
+a.card-link {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  padding: 4px 8px 4px 8px !important;
+  color: rgba(0, 0, 0, 0.1) !important;
+  border-radius: 5px !important;
+}
+
+.card-title.h5 {
+  margin-top: 16px !important;
+  font-size: 1em  !important;
 }
 /*# sourceMappingURL=style.css.map */

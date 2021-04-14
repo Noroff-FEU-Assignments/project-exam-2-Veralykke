@@ -1,10 +1,11 @@
 import Heading from "../layout/Heading";
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import Container from 'react-bootstrap/Container'
+
 export default function Home() {
-	return ( 
+  return ( 
     <>
-<Jumbotron fluid>
+  <Jumbotron fluid>
   <Container>
   <Heading title="Home" />
      <img src="/" alt="bg-home"/>
@@ -14,9 +15,13 @@ export default function Home() {
   <span class="input-group-text border-0" id="search-addon">
     <i class="fas fa-search"></i>
   </span>
-</div>
+  </div>
   </Container>
-</Jumbotron>
-</>
-)
-}
+  </Jumbotron>
+  </>
+  )
+  }
+
+
+
+

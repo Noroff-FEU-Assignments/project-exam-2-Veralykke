@@ -1,0 +1,12 @@
+button {
+    background: $colour-ui-primary !important;
+    border:$colour-ui-primary !important;
+    color:$colour-primary !important;
+     padding: 4px 16px !important;
+    }
+    button.navbar-toggler.collapsed {
+    background:$colour-background !important;
+    }
+    button.navbar-toggler {
+        background:$colour-background !important;
+    }
