@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-function HotelItem({ id, slug }) {
+function HotelItem({ id, slug, excerpt }) {
   return (
     <Link to={`${id}`}>
-      <h5>{slug}</h5>
+    <h5>{slug}</h5>
+      <p>{excerpt}</p>
     </Link>
   );
 }
@@ -12,6 +13,7 @@ function HotelItem({ id, slug }) {
 HotelItem.propTypes = {
   id: PropTypes.number.isRequired,
   slug: PropTypes.string.isRequired,
+  excerpt: PropTypes.string.isRequired,
 };
 
 export default HotelItem;

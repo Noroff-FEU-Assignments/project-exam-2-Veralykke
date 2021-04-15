@@ -8,9 +8,9 @@ export default function Admin() {
     <>
      <Heading title="Holidaze Admin" />
      <Nav defaultActiveKey="/home" className="flex-column">
-  <Nav.Link href="/home">New messages</Nav.Link>
-  <Nav.Link eventKey="link-1">Enquirez</Nav.Link>
-  <Nav.Link eventKey="link-2">Create new establishment</Nav.Link>
+  <Nav.Link className="nav-admin" href="/home">New messages</Nav.Link>
+  <Nav.Link className="nav-admin" eventKey="link-1">Enquirez</Nav.Link>
+  <Nav.Link className="nav-admin" eventKey="link-2">Create new establishment</Nav.Link>
 </Nav>
 </>
 )

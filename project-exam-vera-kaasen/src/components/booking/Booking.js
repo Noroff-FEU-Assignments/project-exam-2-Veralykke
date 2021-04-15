@@ -1,7 +1,7 @@
 import Heading from "../layout/Heading";
 import { Button, Form } from "react-bootstrap";
 
-
+ // NB ADD DATE FORMATTER
 export default function Booking() {
   return (
     <>

@@ -1,8 +1,22 @@
 import Heading from "../layout/Heading";
-import Jumbotron from 'react-bootstrap/Jumbotron'
-import Container from 'react-bootstrap/Container'
+import Image from 'react-bootstrap/Image'
+//import Jumbotron from 'react-bootstrap/Jumbotron'
+//import Container from 'react-bootstrap/Container'
 
 export default function Home() {
+  return ( 
+    <>
+<Image src="holder.js/100px250" fluid />
+  </>
+  )
+  }
+
+
+
+
+//JUMBOTRON
+
+/*export default function Home() {
   return ( 
     <>
   <Jumbotron fluid>
@@ -21,7 +35,6 @@ export default function Home() {
   </>
   )
   }
+*/
 
-
-
-
+//JUMBOTRON

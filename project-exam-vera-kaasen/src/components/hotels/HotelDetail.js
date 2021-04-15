@@ -3,7 +3,10 @@ import { useParams, useHistory } from "react-router-dom";
 import { API } from "../../constants/api.js";
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import Figure from "react-bootstrap/Figure";
+import FigureCaption from 'react-bootstrap/FigureCaption';
+import FigureImage from 'react-bootstrap/FigureImage'
 import Button from "react-bootstrap/Button";
+
 
 function HotelDetail() {
   const [hotel, setHotel] = useState(null);
@@ -28,7 +31,6 @@ function HotelDetail() {
 
           if (response.ok) {
             const json = await response.json();
-            console.log(json);
             setHotel(json);
           } else {
             setError("An error occured");
@@ -63,11 +65,15 @@ function HotelDetail() {
       <Figure.Caption>
         <div className="hotel-detail">
           <h1>{hotel.slug}</h1>
+          <p>{hotel.excerpt.rendered}</p>
         </div>
+        <p>hshrshs</p>
         <Button type="submit">Submit</Button>
       </Figure.Caption>
     </Figure>
   );
 }
+
+
 
 export default HotelDetail;
