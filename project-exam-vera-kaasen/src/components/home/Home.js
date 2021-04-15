@@ -8,11 +8,13 @@ import { FormControl, Form, Button } from "react-bootstrap";
 export default function Home() {
   return ( 
     <>
+     <div id="bg-home"  >
      <Heading title="We bring bergen to you" />
-    <div id="bg-home">
+
       <Form inline>
     <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
     <Button type="submit">Submit</Button>
+     
   </Form>
     </div>
   </>
