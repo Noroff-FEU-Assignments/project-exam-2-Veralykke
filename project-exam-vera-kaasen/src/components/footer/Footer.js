@@ -1,7 +1,6 @@
 import Nav from "react-bootstrap/Nav";
 import {
   FontAwesomeIcon,
-  fontAwesomeIcon,
 } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,

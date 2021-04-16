@@ -44,21 +44,29 @@ function HotelList() {
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
-            <Card.Link href="#">Max 4</Card.Link>
-            <Card.Link href="#">Price from 110$</Card.Link>
-            <Card.Title>Card Title</Card.Title>
             <Card.Text>
               <div className="hotels">
                 {hotels.map(function (hotel) {
                   const { id, slug, excerpt } = hotel;
-                  return <HotelItem key={id} id={id} slug={slug} excerpt={excerpt.rendered}/>;
+                  return (
+                    <Card.Title><span className="card-info">jsnjn</span>
+                    <span className="card-info">jnkni</span><HotelItem
+                    key={id}
+                    id={id}
+                    slug={slug}
+                    excerpt={excerpt.rendered}
+                  /></Card.Title>
+                  );
                 })}
               </div>
             </Card.Text>
             <Button variant="primary">Read more</Button>
           </Card.Body>
         </Card>
-            <Card style={{ width: "18rem" }}>
+
+
+
+        <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
             <Card.Link href="#">Max 4</Card.Link>
@@ -68,7 +76,14 @@ function HotelList() {
               <div className="hotels">
                 {hotels.map(function (hotel) {
                   const { id, slug, excerpt } = hotel;
-                  return <HotelItem key={id} id={id} slug={slug} excerpt={excerpt.rendered} />;
+                  return (
+                    <HotelItem
+                      key={id}
+                      id={id}
+                      slug={slug}
+                      excerpt={excerpt.rendered}
+                    />
+                  );
                 })}
               </div>
             </Card.Text>
@@ -81,51 +96,3 @@ function HotelList() {
 }
 
 export default HotelList;
-//////////////////////////////////////////////////
-/*
- return (
-    <>
-      <CardColumns>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Link href="#">Max 4</Card.Link>
-            <Card.Link href="#">Price from 110$</Card.Link>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              <div className="hotels">
-                {hotels.map(function (hotel) {
-                  const { id, slug } = hotel;
-                  return <HotelItem key={id} id={id} slug={slug} />;
-                })}
-              </div>
-            </Card.Text>
-            <Button variant="primary">Read more</Button>
-          </Card.Body>
-        </Card>
-
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
-            <Card.Text>
-              <div className="hotels">
-                {hotels.map(function (hotel) {
-                  const { id, slug } = hotel;
-                  return <HotelItem key={id} id={id} slug={slug} />;
-                })}
-              </div>
-            </Card.Text>
-            <Button variant="primary">Read more</Button>
-          </Card.Body>
-        </Card>
-      </CardColumns>
-    </>
-  );
-}
-
-export default HotelList;
-
-*/

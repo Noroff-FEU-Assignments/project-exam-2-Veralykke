@@ -1,4 +1,7 @@
 body {
+  height: 100%;
+  /*margin-top: 84px;
+    padding-top: 20px;*/
   background: #FCFCFC !important;
   font-family: "Open Sans", sans-serif !important;
   color: #191919 !important;
@@ -10,7 +13,7 @@ h1 {
 }
 
 p {
-  color: #d81818;
+  color: #191919;
 }
 
 .social-container {
@@ -64,11 +67,16 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
   background: #FCFCFC !important;
 }
 
+#logo {
+  height: 28px;
+  width: auto;
+}
+
 .card-body {
   border-radius: 35px !important;
 }
 
-a.card-link {
+.card-info {
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
   padding: 4px 8px 4px 8px !important;
   color: rgba(0, 0, 0, 0.1) !important;
@@ -78,5 +86,39 @@ a.card-link {
 .card-title.h5 {
   margin-top: 16px !important;
   font-size: 1em  !important;
+}
+
+#bg-home {
+  width: 100%;
+  height: auto;
+  background-position: center;
+  position: relative !important;
+  /*background-size: cover;
+    height: 50% !important ;
+    width: auto;
+    background-position: center;
+    position: relative;
+    background-position-x: 450px;
+    background-repeat: no-repeat;*/
+}
+
+.container-home {
+  position: relative !important;
+}
+
+.h1-home {
+  margin-left: 18px !important;
+  position: absolute !important;
+}
+
+.we-bring-text {
+  position: absolute !important;
+}
+
+.mr-sm-2 {
+  width: 150px !important;
+  border-radius: 1rem !important;
+  border: 2px solid #FFD651 !important;
+  position: absolute !important;
 }
 /*# sourceMappingURL=style.css.map */

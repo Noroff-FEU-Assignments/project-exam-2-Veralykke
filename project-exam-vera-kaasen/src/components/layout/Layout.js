@@ -19,7 +19,7 @@ function Layout() {
  
     <Router>
       <Navbar bg="light" variant="light" expand="lg">
-        <Navbar.Brand href="/">Holidaze</Navbar.Brand>
+        <Navbar.Brand href="/"><img src="/images/logooo.png" alt="logo" id="logo"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
@@ -39,7 +39,6 @@ function Layout() {
           <Route path="/login" component={Login} />
           <Route path="/Admin" component={Admin} />
           <Route path="/Booking" component={Booking} />
-
         </Switch>
       </Container>
     </Router>

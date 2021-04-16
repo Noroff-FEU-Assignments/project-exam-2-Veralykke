@@ -1,22 +1,33 @@
-
-//import bergen from "./images/bergen.jpg";
-//import Jumbotron from 'react-bootstrap/Jumbotron'
-//import Container from 'react-bootstrap/Container'
-import { FormControl, Form, Button } from "react-bootstrap";
-
+import { FormControl, Form, } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 export default function Home() {
-  return ( 
+  return (
     <>
-     <div id="bg-home">
-      <p>We bring</p>
-      <h1>Bergen</h1>
-      <p>To you</p>
-      <Form inline>
-    <FormControl type="text" placeholder="Search" className=" mr-sm-2" />
-  </Form>
-    </div>
-  </>
+    <Container>
+    <div className="container-home">
+        <p className="we-bring-text">We bring</p>
+        <h1 className="h1-home">Bergen</h1>
+        <p>To you</p>
+        <Form inline>
+          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+        </Form>
+        <img src="/images/bergen.jpg" alt="bg-bergen" id="bg-home"></img>
+        </div>
+        </Container>
+    </>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
