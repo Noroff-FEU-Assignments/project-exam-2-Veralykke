@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { API } from "../../constants/api.js";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+//import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import Figure from "react-bootstrap/Figure";
 import FigureCaption from 'react-bootstrap/FigureCaption';
 import FigureImage from 'react-bootstrap/FigureImage'

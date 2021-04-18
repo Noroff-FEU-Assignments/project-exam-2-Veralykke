@@ -8,7 +8,7 @@ import FormError from "../common/FormError";
 import { API, TOKEN_PATH } from "../../constants/api";
 //import { Button, Form } from "react-bootstrap";
 import Heading from "../layout/Heading";
-import AuthContext from "../../context/AuthContext";
+import AuthContext from "../context/AuthContext";
 
 const url = API + TOKEN_PATH;
 

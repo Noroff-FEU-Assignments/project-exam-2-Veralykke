@@ -1,5 +1,6 @@
 import Heading from "../layout/Heading";
-import Nav from "react-bootstrap/Nav";
+import NavAdmin from "../layout/NavAdmin";
+
 export default function Admin() {
 	return ( 
     <>

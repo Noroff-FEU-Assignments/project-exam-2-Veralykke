@@ -15,13 +15,14 @@ import Admin from "../admin/Admin";
 import Booking from "../booking/Booking";
 import LoginPage from "../login/LoginPage";
 import { AuthProvider } from "../context/AuthContext";
-import NavAdmin from "./NavAdmin";
+import NavAdmin from "../layout/NavAdmin";
 
 
 function Layout() {
   return (
     <AuthProvider>
     <Router>
+      <NavAdmin/>
       <Navbar bg="light" variant="light" expand="lg">
         <Navbar.Brand href="/">
           <img src="/images/logooo.png" alt="logo" id="logo"></img>
