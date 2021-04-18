@@ -1,8 +1,8 @@
-/*import { useContext } from "react";
+import { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 
-function NavBtn() {
+function NavAdmin() {
     const [auth, setAuth] = useContext(AuthContext);
 
     const history = useHistory();
@@ -20,10 +20,10 @@ function NavBtn() {
                 |  <Link to="/Admin"> Admin</Link> | <button onClick={logout}>log out</button>
             </>
         ) : (
-            <Link to="/login">Login</Link>
+            <Link to="/loginPage">Login</Link>
         )}
         </nav>
     );
 }
 
-export default NavBtn;*/
+export default NavAdmin;

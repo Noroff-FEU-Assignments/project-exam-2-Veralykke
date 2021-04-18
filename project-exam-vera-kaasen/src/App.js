@@ -1,7 +1,6 @@
 import React from "react";
 import "./sass/style.scss";
 import Layout from "./components/layout/Layout";
-import LoginPage from "./components/login/LoginPage";
 import Footer from "./components/footer/Footer";
 
 function App() {

@@ -1,10 +1,10 @@
 import Heading from "../layout/Heading";
-import LoginForm from "../login/loginForm" 
+import LoginForm from "./LoginForm";
 
 export default function LoginPage() {
     return (
         <>
-        <Heading constent="Login" />
+        <Heading title="Login" />
         <LoginForm />
         </>
     )
