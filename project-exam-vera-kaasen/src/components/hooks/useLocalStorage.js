@@ -1,7 +1,6 @@
-import { useState } from "react";
+/*import { useState } from "react";
 
 export default function useLocalStorage(key, initialValue) {
-  //id??
   // state to store our value
 
   // Pass initial state function to iseState so logic is only executed once
@@ -38,6 +37,6 @@ export default function useLocalStorage(key, initialValue) {
       console.log(error);
     }
   };
-}
+}*/
 
-//NB MER HER??
+

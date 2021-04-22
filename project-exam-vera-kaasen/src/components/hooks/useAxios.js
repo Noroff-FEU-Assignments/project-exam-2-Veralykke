@@ -1,4 +1,4 @@
-import {  useContext } from "react";
+/*import {  useContext } from "react";
 import axios from "axios";
 import AuthContext from "../context/AuthContext";
 
@@ -18,4 +18,4 @@ export default function useAxios() {
     });
 
     return apiClient;
-}
+}*/

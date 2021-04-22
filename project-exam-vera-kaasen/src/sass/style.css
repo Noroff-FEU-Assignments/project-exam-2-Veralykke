@@ -1,7 +1,5 @@
 body {
-  height: 100%;
-  /*margin-top: 84px;
-    padding-top: 20px;*/
+  min-height: 100vh;
   background: #FCFCFC !important;
   font-family: "Open Sans", sans-serif !important;
   color: #191919 !important;
@@ -18,8 +16,9 @@ p {
 
 .social-container {
   background-color: #FCFCFC !important;
-  padding: 25px 50px;
+  padding: 37px 50px;
   text-align: center;
+  position: relative !important;
 }
 
 a.social {
@@ -88,37 +87,16 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
   font-size: 1em  !important;
 }
 
-#bg-home {
-  width: 100%;
-  height: auto;
-  background-position: center;
-  position: relative !important;
-  /*background-size: cover;
-    height: 50% !important ;
-    width: auto;
-    background-position: center;
-    position: relative;
-    background-position-x: 450px;
-    background-repeat: no-repeat;*/
-}
-
-.container-home {
-  position: relative !important;
-}
-
 .h1-home {
   margin-left: 18px !important;
-  position: absolute !important;
-}
-
-.we-bring-text {
-  position: absolute !important;
+  position: relative !important;
 }
 
 .mr-sm-2 {
   width: 150px !important;
   border-radius: 1rem !important;
   border: 2px solid #FFD651 !important;
-  position: absolute !important;
+  position: relative !important;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import { API } from "../../constants/api.js";
+import { BASE_API } from "../../constants/api.js";
 //import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
 import Figure from "react-bootstrap/Figure";
 import FigureCaption from 'react-bootstrap/FigureCaption';
@@ -8,11 +8,14 @@ import FigureImage from 'react-bootstrap/FigureImage'
 import Button from "react-bootstrap/Button";
 
 
+
 function HotelDetail() {
   const [hotel, setHotel] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  //const singlePageURL = BASE_API  + `page/${id}`
+  const singlePageURL = BASE_API + "/" + `page/${id}`
+ 
   let history = useHistory();
 
   const { id } = useParams();
@@ -21,13 +24,11 @@ function HotelDetail() {
     history.push("/");
   }
 
-  const url = API + "/" + id + "pages?_embed";
-
   useEffect(
     function () {
       async function fetchData() {
         try {
-          const response = await fetch(url);
+          const response = await fetch(singlePageURL);
 
           if (response.ok) {
             const json = await response.json();
@@ -43,7 +44,7 @@ function HotelDetail() {
       }
       fetchData();
     },
-    [url]
+    [singlePageURL]
   );
 
   if (loading) {

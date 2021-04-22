@@ -1,15 +1,21 @@
 import Heading from "../layout/Heading";
-import NavAdmin from "../layout/NavAdmin";
-
+import AdminNav from "../layout/AdminNav";
+import Nav from "react-bootstrap/Nav";
 export default function Admin() {
-	return ( 
+  return (
     <>
-     <Heading title="Holidaze Admin" />
-     <Nav defaultActiveKey="/home" className="flex-column">
-  <Nav.Link className="nav-admin" href="/home">New messages</Nav.Link>
-  <Nav.Link className="nav-admin" eventKey="link-1">Enquirez</Nav.Link>
-  <Nav.Link className="nav-admin" eventKey="link-2">Create new establishment</Nav.Link>
-</Nav>
-</>
-)
+      <Heading title="Holidaze Admin" />
+      <Nav defaultActiveKey="/home" className="flex-column">
+        <Nav.Link className="nav-admin" href="/home">
+          New messages
+        </Nav.Link>
+        <Nav.Link className="nav-admin" eventKey="link-1">
+          Enquirez
+        </Nav.Link>
+        <Nav.Link className="nav-admin" eventKey="link-2">
+          Create new establishment
+        </Nav.Link>
+      </Nav>
+    </>
+  );
 }

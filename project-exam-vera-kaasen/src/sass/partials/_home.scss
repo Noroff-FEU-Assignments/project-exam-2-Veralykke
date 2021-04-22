@@ -1,34 +1,19 @@
 
-#bg-home {
-    width:100%;
-    height: auto;
-    background-position: center;
-    position: relative !important;
-    /*background-size: cover;
-    height: 50% !important ;
-    width: auto;
-    background-position: center;
-    position: relative;
-    background-position-x: 450px;
-    background-repeat: no-repeat;*/
-}
-.container-home {
-    position: relative !important;
-}
 .h1-home {
     margin-left: 18px !important;
-    position: absolute !important;
+    position: relative !important;
+    //color:$colour-background !important;
 }
-.we-bring-text {
-    position: absolute !important;
+.txt-home {
+    //color:$colour-background !important;
 }
+
 .mr-sm-2{
     width: 150px !important;
     border-radius: 1rem !important;
     border: 2px solid $colour-ui-primary !important;
-    position: absolute !important;
+    position: relative !important;
+    margin: 0 auto;
 }  
-
-
 
 

@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+/*import { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -50,26 +50,28 @@ export default function LoginForm() {
 
   return (
     <>
-     <Heading title="Log in" />
-    <form onSubmit={handleSubmit(onSubmit)}>
-            {loginError && <FormError>{loginError}</FormError>}
-            <fieldset disabled={submitting}>
-                <div>
-                    <input name="username" placeholder="username" ref={register} />
-                    {errors.username && <FormError>{errors.username.message}</FormError>}
-                </div>
+      <Heading title="Log in" />
+      <form onSubmit={handleSubmit(onSubmit)}>
+        {loginError && <FormError>{loginError}</FormError>}
+        <fieldset disabled={submitting}>
+          <div>
+            <input name="username" placeholder="username" ref={register} />
+          </div>
 
-                <div>
-                    <input name="password" placeholder="Password" ref={register} type="password" />
-                    {errors.password && <FormError>{errors.password.message}</FormError>}
-                </div>
-                <button>{submitting ? "Loggin in..." : "Login"}</button>
-            </fieldset>
-        </form> 
+          <div>
+            <input
+              name="password"
+              placeholder="Password"
+              ref={register}
+              type="password"
+            />
+          </div>
+          <input type="submit" value="Log In" />
+        </fieldset>
+      </form>
     </>
   );
 }
-
 
 /////////////bruke denne fra bootstrap
 
@@ -96,6 +98,4 @@ export default function LoginForm() {
     </>
   );
 */
-
-//////////////////
 

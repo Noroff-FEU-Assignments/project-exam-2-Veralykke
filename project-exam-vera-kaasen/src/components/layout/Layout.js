@@ -15,14 +15,11 @@ import Admin from "../admin/Admin";
 import Booking from "../booking/Booking";
 import LoginPage from "../login/LoginPage";
 import { AuthProvider } from "../context/AuthContext";
-import NavAdmin from "../layout/NavAdmin";
-
+import AdminNav from "./AdminNav";
 
 function Layout() {
   return (
-    <AuthProvider>
     <Router>
-      <NavAdmin/>
       <Navbar bg="light" variant="light" expand="lg">
         <Navbar.Brand href="/">
           <img src="/images/logooo.png" alt="logo" id="logo"></img>
@@ -49,7 +46,6 @@ function Layout() {
         </Switch>
       </Container>
     </Router>
-    </AuthProvider> 
   );
 }
 
