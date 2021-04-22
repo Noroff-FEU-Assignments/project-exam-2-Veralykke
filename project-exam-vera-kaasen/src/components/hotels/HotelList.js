@@ -4,15 +4,14 @@ import HotelItem from "../hotels/HotelItem";
 import { Card } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import CardColumns from "react-bootstrap/CardColumns";
-
-
-function HotelList() {
+import { Link } from "react-router-dom";
+function HotelList({ search }) {
   const [hotels, setHotels] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const allPagesURL = BASE_API + "pages"
-  
+  const allPagesURL = BASE_API + "pages";
+
   useEffect(function () {
     async function fetchData() {
       try {
@@ -40,41 +39,27 @@ function HotelList() {
   if (error) {
     return <div>ERROR: An error occured</div>;
   }
+  const filteredHotels =
+    search.length === 0
+      ? []
+      : hotels.filter((hotel) =>
+          hotel.slug.toLowerCase().includes(search.toLowerCase())
+        );
 
   return (
     <>
-      <CardColumns>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Text>
-              <div className="hotels">
-                {hotels.map(function (hotel) {
-                  const { id, slug, excerpt, media} = hotel;
-                  return (
-                    <Card.Title >
-                      <span className="card-info">jsnjn</span>
-                      <span className="card-info">jnkni</span><HotelItem
-                    key={id}
-                    id={id}
-                    slug={slug}
-                    excerpt={excerpt.rendered} 
-                    media={media}/>
-                    </Card.Title>
-                  );
-                })}
-              </div>
-            </Card.Text>
-            <Button variant="primary">Read more</Button>
-          </Card.Body>
-        </Card>
-      </CardColumns>
+      <div className="hotels">
+        {filteredHotels.map(function (hotel) {
+          const { id, slug, excerpt, media } = hotel;
+          return (
+            <Link to={`/hotels/${id}`}>
+              <h5>{hotel.slug}</h5>
+            </Link>
+          );
+        })}
+      </div>
     </>
   );
-
-  
 }
 
 export default HotelList;
-
-

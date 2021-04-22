@@ -1,4 +1,4 @@
-/*import { useState } from "react";
+import { useState } from "react";
 
 export default function useLocalStorage(key, initialValue) {
   // state to store our value
@@ -37,6 +37,5 @@ export default function useLocalStorage(key, initialValue) {
       console.log(error);
     }
   };
-}*/
-
+}
 

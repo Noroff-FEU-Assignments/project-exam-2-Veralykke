@@ -1,11 +1,11 @@
-/*import Heading from "../layout/Heading";
+import Heading from "../layout/Heading";
 import LoginForm from "./LoginForm";
 
 export default function LoginPage() {
-    return (
-        <>
-        <Heading title="Login" />
-        <LoginForm />
-        </>
-    )
-};*/
+  return (
+    <>
+      <Heading title="Login" />
+      <LoginForm />
+    </>
+  );
+}

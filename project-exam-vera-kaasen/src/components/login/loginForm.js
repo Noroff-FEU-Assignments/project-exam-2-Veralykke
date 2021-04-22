@@ -1,16 +1,16 @@
-/*import { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
-import { API, TOKEN_PATH } from "../../constants/api";
+import { BASE_API, TOKEN_PATH } from "../../constants/api";
 //import { Button, Form } from "react-bootstrap";
 import Heading from "../layout/Heading";
 import AuthContext from "../context/AuthContext";
 
-const url = API + TOKEN_PATH;
+const url = BASE_API + TOKEN_PATH;
 
 const schema = yup.object().shape({
   username: yup.string().required("please enter your username"),
@@ -50,7 +50,6 @@ export default function LoginForm() {
 
   return (
     <>
-      <Heading title="Log in" />
       <form onSubmit={handleSubmit(onSubmit)}>
         {loginError && <FormError>{loginError}</FormError>}
         <fieldset disabled={submitting}>
@@ -98,4 +97,3 @@ export default function LoginForm() {
     </>
   );
 */
-

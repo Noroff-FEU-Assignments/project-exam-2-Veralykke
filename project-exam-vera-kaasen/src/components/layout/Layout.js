@@ -9,6 +9,7 @@ import {
 import Container from "react-bootstrap/Container";
 import Home from "../home/Home";
 import HotelList from "../hotels/HotelList";
+import AllHotels from "../hotels/AllHotels";
 import HotelDetail from "../hotels/HotelDetail";
 import Contact from "../contact/Contact";
 import Admin from "../admin/Admin";
@@ -37,7 +38,7 @@ function Layout() {
       <Container>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/hotels" component={HotelList} />
+          <Route path="/hotels" component={AllHotels} />
           <Route path="/hotels/:id" component={HotelDetail} />
           <Route path="/contact" component={Contact} />
           <Route path="/login" component={LoginPage} />
