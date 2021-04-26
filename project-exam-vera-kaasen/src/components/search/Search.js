@@ -12,8 +12,8 @@ export default function Search() {
   const [search, setSearch] = useState("");
 
   return (
-    <div>
-      <FormControl
+    <div className="search"> 
+      <FormControl 
         type="text"
         placeholder="Search Hotels..."
         value={search}

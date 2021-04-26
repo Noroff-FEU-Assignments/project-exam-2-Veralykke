@@ -71,8 +71,15 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
   width: auto;
 }
 
+.card {
+  border-radius: 1.25rem !important;
+  margin-top: 65px;
+  width: 20.5rem !important;
+}
+
 .card-body {
   border-radius: 35px !important;
+  padding: 2.25rem !important;
 }
 
 .card-info {
@@ -98,5 +105,11 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
   border: 2px solid #FFD651 !important;
   position: relative !important;
   margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

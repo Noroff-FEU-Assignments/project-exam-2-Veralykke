@@ -1,11 +1,11 @@
-/*import {  useContext } from "react";
+import {  useContext } from "react";
 import axios from "axios";
 import AuthContext from "../context/AuthContext";
 
-//const url = preocess.URL HER?
+const url = TOKEN_PATH
 
 export default function useAxios() {
-    const [auth] = useCOntext(AuthContext);
+    const [auth] = useContext(AuthContext);
 
     const apiClient = axios.create({
         baseURL: URL,
@@ -18,4 +18,4 @@ export default function useAxios() {
     });
 
     return apiClient;
-}*/
+}

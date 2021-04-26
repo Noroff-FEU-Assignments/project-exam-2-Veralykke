@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import { BASE_API } from "../../constants/api.js";
 import HotelItem from "../hotels/HotelItem";
-import { Card } from "react-bootstrap";
-import { Button } from "react-bootstrap";
-import CardColumns from "react-bootstrap/CardColumns";
 import { Link } from "react-router-dom";
 function HotelList({ search }) {
   const [hotels, setHotels] = useState([]);
@@ -50,9 +47,9 @@ function HotelList({ search }) {
     <>
       <div className="hotels">
         {filteredHotels.map(function (hotel) {
-          const { id, slug, excerpt, media } = hotel;
+          const { id, slug } = hotel;
           return (
-            <Link to={`/hotels/${id}`}>
+            <Link to={`/hotel${id}`}>
               <h5>{hotel.slug}</h5>
             </Link>
           );

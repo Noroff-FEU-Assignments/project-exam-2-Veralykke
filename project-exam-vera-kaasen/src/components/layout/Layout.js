@@ -41,7 +41,7 @@ function Layout() {
           <Route path="/hotels" component={AllHotels} />
           <Route path="/hotels/:id" component={HotelDetail} />
           <Route path="/contact" component={Contact} />
-          <Route path="/login" component={LoginPage} />
+          <Route path="/loginPage" component={LoginPage} />
           <Route path="/admin" exact component={Admin} />
           <Route path="/booking" component={Booking} />
         </Switch>

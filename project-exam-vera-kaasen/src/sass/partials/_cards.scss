@@ -1,5 +1,13 @@
+.card {
+    border-radius: 1.25rem !important;
+    margin-top: 65px;
+    width: 20.5rem !important;
+}
+
 .card-body {
     border-radius: 35px !important;
+    padding: 2.25rem !important;
+   
 }
 .card-info {
 border: 1px solid $colour-ui-shadow !important;

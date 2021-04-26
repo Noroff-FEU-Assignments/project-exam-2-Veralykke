@@ -49,7 +49,7 @@ function AllHotels() {
             <Card.Text>
               <div className="hotels">
                 {hotels.map(function (hotel) {
-                  const { id, slug, excerpt, media } = hotel;
+                  const { id, title, excerpt } = hotel;
                   return (
                     <Card.Title>
                       <span className="card-info">jsnjn</span>
@@ -57,9 +57,8 @@ function AllHotels() {
                       <HotelItem
                         key={id}
                         id={id}
-                        slug={slug}
+                        slug={title.rendered}
                         excerpt={excerpt.rendered}
-                        media={media}
                       />
                     </Card.Title>
                   );
@@ -75,3 +74,4 @@ function AllHotels() {
 }
 
 export default AllHotels;
+
