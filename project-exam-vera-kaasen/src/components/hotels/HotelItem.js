@@ -7,7 +7,6 @@ function HotelItem({ id, slug, excerpt }) {
     <Link to={`${id}`}>
     <h5>{slug}</h5>
     <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
-  
     </Link>
   );
 }

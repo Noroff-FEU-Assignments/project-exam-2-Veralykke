@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { BASE_API } from "../../constants/api.js";
 import HotelItem from "./HotelItem";
-import { Card } from "react-bootstrap";
-import { Button } from "react-bootstrap";
-import CardColumns from "react-bootstrap/CardColumns";
+import { Card,  Button, CardColumns } from "react-bootstrap";
+/*import { Button } from "react-bootstrap";
+import CardColumns from "react-bootstrap/CardColumns";*/
 
 function AllHotels() {
   const [hotels, setHotels] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const allPagesURL = BASE_API + "pages";
+  const allPagesURL = BASE_API + "hotel_info";
 
   useEffect(function () {
     async function fetchData() {
@@ -49,16 +49,17 @@ function AllHotels() {
             <Card.Text>
               <div className="hotels">
                 {hotels.map(function (hotel) {
-                  const { id, title, excerpt } = hotel;
+                  const { id, title, content } = hotel;
                   return (
                     <Card.Title>
-                      <span className="card-info">jsnjn</span>
-                      <span className="card-info">jnkni</span>
+                      <span className="card-info one">jsnjn</span>
+                      <span className="card-info two">jnkni</span>
                       <HotelItem
+                      
                         key={id}
                         id={id}
                         slug={title.rendered}
-                        excerpt={excerpt.rendered}
+                        excerpt={content.rendered}
                       />
                     </Card.Title>
                   );
@@ -75,3 +76,30 @@ function AllHotels() {
 
 export default AllHotels;
 
+/*      <CardColumns>
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src="holder.js/100px180" />
+          <Card.Body>
+            <Card.Text>
+              <div className="hotels">
+                {hotels.map(function (hotel) {
+                  const { id, title, content } = hotel;
+                  return (
+                    <Card.Title>
+                      <span className="card-info one">jsnjn</span>
+                      <span className="card-info two">jnkni</span>
+                      <HotelItem
+                        key={id}
+                        id={id}
+                        slug={title.rendered}
+                        excerpt={content.rendered}
+                      />
+                    </Card.Title>
+                  );
+                })}
+              </div>
+            </Card.Text>
+            <Button variant="primary">Read more</Button>
+          </Card.Body>
+        </Card>
+      </CardColumns>*/ 

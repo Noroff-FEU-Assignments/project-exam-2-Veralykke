@@ -14,7 +14,7 @@ function HotelDetail() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   //const singlePageURL = BASE_API  + `page/${id}`
-  const singlePageURL = BASE_API + "/" + `page/${id}`
+  const singlePageURL = BASE_API + "/" + `hotel_info/${id}`
  
   let history = useHistory();
 
@@ -66,7 +66,6 @@ function HotelDetail() {
       <Figure.Caption>
         <div className="hotel-detail">
           <h1>{hotel.slug}</h1>
-          <p>{hotel.excerpt.rendered}</p>
         </div>
         <p>hshrshs</p>
         <Button type="submit">Submit</Button>
