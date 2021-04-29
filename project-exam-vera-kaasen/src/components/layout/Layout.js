@@ -12,14 +12,18 @@ import HotelList from "../hotels/HotelList";
 import AllHotels from "../hotels/AllHotels";
 import HotelDetail from "../hotels/HotelDetail";
 import Contact from "../contact/Contact";
-import Admin from "../admin/Admin";
+import Admin from "../admin/posts/AdminPage";
 import Booking from "../booking/Booking";
 import LoginPage from "../login/LoginPage";
 import { AuthProvider } from "../context/AuthContext";
-import AdminNav from "./AdminNav";
+import AdminNav from "../layout/AdminNav;
+import PostPage from "../admin/posts/PostPage";
+import AddPost from "../admin/posts/AddPost";
+import AdminPage from "../../components/admin/AdminPage";
 
 function Layout() {
   return (
+    <AuthProvider>
     <Router>
       <Navbar bg="light" variant="light" expand="lg">
         <Navbar.Brand href="/">
@@ -28,7 +32,7 @@ function Layout() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/"></Nav.Link>
             <Nav.Link href="/hotels/">Hotels</Nav.Link>
             <Nav.Link href="/contact/">Contact</Nav.Link>
             <Nav.Link href="/LoginPage/">Admin</Nav.Link>
@@ -42,11 +46,14 @@ function Layout() {
           <Route path="/hotels/:id" component={HotelDetail} />
           <Route path="/contact" component={Contact} />
           <Route path="/loginPage" component={LoginPage} />
-          <Route path="/admin" exact component={Admin} />
           <Route path="/booking" component={Booking} />
+          <Route path="/admin" exact component={AdminPage} />
+          <Route path="/admin/posts" exact component={PostPage} />
+          <Route path="/admin/posts/add" component={AddPost} />
         </Switch>
       </Container>
     </Router>
+    </AuthProvider>
   );
 }
 

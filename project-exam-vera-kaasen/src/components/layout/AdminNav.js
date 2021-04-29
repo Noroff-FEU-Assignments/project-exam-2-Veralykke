@@ -1,4 +1,4 @@
-/*import { useContext } from "react";
+import { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 
@@ -28,4 +28,3 @@ function Navigation() {
 }
 
 export default AdminNav;
-*/

@@ -2,13 +2,13 @@ import {  useContext } from "react";
 import axios from "axios";
 import AuthContext from "../context/AuthContext";
 
-const url = TOKEN_PATH
+const url = TOKEN_PATH;
 
 export default function useAxios() {
     const [auth] = useContext(AuthContext);
 
     const apiClient = axios.create({
-        baseURL: URL,
+        baseURL: url,
     });
 
     apiClient.interceotors.request.use(function (config) {
