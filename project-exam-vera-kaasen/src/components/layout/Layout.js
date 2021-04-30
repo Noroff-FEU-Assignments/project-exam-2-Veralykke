@@ -12,19 +12,20 @@ import HotelList from "../hotels/HotelList";
 import AllHotels from "../hotels/AllHotels";
 import HotelDetail from "../hotels/HotelDetail";
 import Contact from "../contact/Contact";
-import Admin from "../admin/posts/AdminPage";
+//import Admin from "../admin/posts/AdminPage";
 import Booking from "../booking/Booking";
 import LoginPage from "../login/LoginPage";
 import { AuthProvider } from "../context/AuthContext";
-import AdminNav from "../layout/AdminNav;
+/*import AdminNav from "./AdminNav";
 import PostPage from "../admin/posts/PostPage";
 import AddPost from "../admin/posts/AddPost";
 import EditPost from "../admin/posts/EditPost";
-import AdminPage from "../../components/admin/AdminPage";
+import AdminPage from "../admin/AdminPage";*/
+
+//NB NB NB  SETT INN RUNDT LAYOUT:     <AuthProvider>   </AuthProvider>
 
 function Layout() {
   return (
-    <AuthProvider>
     <Router>
       <Navbar bg="light" variant="light" expand="lg">
         <Navbar.Brand href="/">
@@ -44,18 +45,17 @@ function Layout() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/hotels" component={AllHotels} />
-          <Route path="/hotels/:id" component={HotelDetail} />
+          <Route path="/hotel/:id" component={HotelDetail} />
           <Route path="/contact" component={Contact} />
           <Route path="/loginPage" component={LoginPage} />
-          <Route path="/booking" component={Booking} />
+          {/*<Route path="/booking" component={Booking} />
           <Route path="/admin" exact component={AdminPage} />
           <Route path="/admin/posts" exact component={PostPage} />
           <Route path="/admin/posts/add" component={AddPost} />
-          <Route path="/admin/posts/edit/:id" component={EditPost} />
+  <       Route path="/admin/posts/edit/:id" component={EditPost} />*/}
         </Switch>
       </Container>
     </Router>
-    </AuthProvider>
   );
 }
 

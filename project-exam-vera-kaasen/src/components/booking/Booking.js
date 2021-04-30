@@ -1,5 +1,5 @@
 
-import { Button, Form } from "react-bootstrap";
+/*import { Button, Form } from "react-bootstrap";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import Heading from "../layout/Heading";
@@ -75,9 +75,9 @@ export default function Booking() {
     </>
   );
 }
+*/
 
-
-
+//////////////////////////////////////////////////////////////////
 
 // HAR INNSTALERT DENNE: npm install react-bootstrap bootstrap react-datepicker
 // NB ADD DATE FORMATTER

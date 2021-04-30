@@ -2,10 +2,11 @@
 .h1-home {
     margin-left: 18px !important;
     position: relative !important;
-    //color:$colour-background !important;
+    color:$colour-background !important;
 }
 .txt-home {
-    //color:$colour-background !important;
+    color:$colour-background !important;
+    position: relative;
 }
 
 .mr-sm-2{
@@ -16,4 +17,23 @@
     margin: 0 auto; 
     align-items: center;
     display: flex;
+    margin-top: 100px;
 }  
+.img-fluid {
+    position: absolute;
+}
+
+.home-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/*.jumbotron {
+    url("https://unsplash.com/photos/Acuc51Q2gAg") no-repeat center center;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-sixe: 100% 100%;
+    -o-background-size: 100% 100%;
+    height: calc(100vh);
+}
+*/

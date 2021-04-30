@@ -1,4 +1,4 @@
-import { useStat, useEffect } from "react";
+/*import { useStat, useEffect } from "react";
 import { useParams} from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yupm from "yup";
@@ -49,7 +49,7 @@ export default function EditPost() {
     []
     );
 
-    asyns function onSubmit(data) {
+    async function onSubmit(data) {
         setUpdatingPost(true);
         setUpdatingError(null);
         setUpdated(false);
@@ -96,4 +96,4 @@ export default function EditPost() {
             </form>
         </AdminPage>
     );
-}
+}*/

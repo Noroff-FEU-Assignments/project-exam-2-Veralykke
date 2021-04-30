@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { BASE_API } from "../../constants/api.js";
-import HotelItem from "../hotels/HotelItem";
 import { Link } from "react-router-dom";
+
 function HotelList({ search }) {
   const [hotels, setHotels] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const allPagesURL = BASE_API + "pages";
+  const allPagesURL = BASE_API + "hotel_info";
 
   useEffect(function () {
     async function fetchData() {
@@ -47,10 +47,10 @@ function HotelList({ search }) {
     <>
       <div className="hotels">
         {filteredHotels.map(function (hotel) {
-          const { id, slug } = hotel;
+          const { id, title } = hotel;
           return (
-            <Link to={`/hotel${id}`}>
-              <h5>{hotel.slug}</h5>
+            <Link to={`/hotel/${id}`}>
+              <h5>{hotel.title.rendered}</h5>
             </Link>
           );
         })}

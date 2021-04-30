@@ -1,4 +1,4 @@
-import { useState } from "react";
+/*import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yupm from "yup";
@@ -66,4 +66,4 @@ if(data.featured_media === "") {
       </form>
     </AdminPage>
   );
-
+*/
