@@ -42,29 +42,28 @@ function AllHotels() {
 
   return (
     <>
-       <CardColumns>
+      <CardColumns>
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
-            <Card.Text>
-              <div className="hotels">
-                {hotels.map(function (hotel) {
-                  const { id, title, content } = hotel;
-                  return (
-                    <Card.Title>
-                      <span className="card-info one">jsnjn</span>
-                      <span className="card-info two">jnkni</span>
-                      <HotelItem
-                        key={id}
-                        id={id}
-                        slug={title.rendered}
-                        excerpt={content.rendered}
-                      />
-                    </Card.Title>
-                  );
-                })}
-              </div>
-            </Card.Text>
+            <div className="hotels">
+              {hotels.map(function (hotel) {
+                const { id, title, content } = hotel;
+                return (
+                  <Card.Title>
+                    <span className="card-info one">jsnjn</span>
+                    <span className="card-info two">jnkni</span>
+                    <HotelItem
+                      key={id}
+                      id={id}
+                      slug={title.rendered}
+                      excerpt={content.rendered}
+                    />
+                  </Card.Title>
+                );
+              })}
+            </div>
+
             <Button variant="primary">Read more</Button>
           </Card.Body>
         </Card>
@@ -74,4 +73,3 @@ function AllHotels() {
 }
 
 export default AllHotels;
-
