@@ -57,7 +57,6 @@ function HotelDetail() {
         slug={hotel.title.rendered}
         excerpt={hotel.content.rendered}
       />
-      <Button variant="primary">Book now</Button>
     </>
   );
 }

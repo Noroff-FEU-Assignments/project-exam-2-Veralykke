@@ -79,12 +79,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 .card {
   border-radius: 1.25rem !important;
   margin-top: 65px;
-  width: 20.5rem !important;
-}
-
-.card-body {
-  border-radius: 35px !important;
-  padding: 2.25rem !important;
+  /*width: 20.5rem !important;*/
 }
 
 .card-info {
@@ -131,6 +126,9 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 
 .img-fluid {
   position: absolute;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
 }
 
 .home-container {

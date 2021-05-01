@@ -42,9 +42,6 @@ function AllHotels() {
 
   return (
     <>
-      <CardColumns>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
             <Card.Text>
               <div className="hotels">
@@ -52,8 +49,6 @@ function AllHotels() {
                   const { id, title, content } = hotel;
                   return (
                     <Card.Title>
-                      <span className="card-info one">jsnjn</span>
-                      <span className="card-info two">jnkni</span>
                       <HotelItem
                         key={id}
                         id={id}
@@ -65,10 +60,7 @@ function AllHotels() {
                 })}
               </div>
             </Card.Text>
-            <Button variant="primary">Read more</Button>
           </Card.Body>
-        </Card>
-      </CardColumns>
     </>
   );
 }

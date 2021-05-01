@@ -8,21 +8,21 @@ import {
 } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Home from "../home/Home";
-import HotelList from "../hotels/HotelList";
+//import HotelList from "../hotels/HotelList";
 import AllHotels from "../hotels/AllHotels";
 import HotelDetail from "../hotels/HotelDetail";
 import Contact from "../contact/Contact";
 //import Admin from "../admin/posts/AdminPage";
-import Booking from "../booking/Booking";
+//import Booking from "../booking/Booking";
 import LoginPage from "../login/LoginPage";
-import { AuthProvider } from "../context/AuthContext";
+//import { AuthProvider } from "../context/AuthContext";
 /*import AdminNav from "./AdminNav";
 import PostPage from "../admin/posts/PostPage";
 import AddPost from "../admin/posts/AddPost";
 import EditPost from "../admin/posts/EditPost";
 import AdminPage from "../admin/AdminPage";*/
 
-//NB NB NB  SETT INN RUNDT LAYOUT:     <AuthProvider>   </AuthProvider>
+//NB NB NB  SETT INN RUNDT LAYOUT: har satt på app.js    <AuthProvider>   </AuthProvider>
 
 function Layout() {
   return (

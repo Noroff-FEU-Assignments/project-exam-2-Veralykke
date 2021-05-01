@@ -21,6 +21,9 @@
 }  
 .img-fluid {
     position: absolute;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: auto;
 }
 
 .home-container {
