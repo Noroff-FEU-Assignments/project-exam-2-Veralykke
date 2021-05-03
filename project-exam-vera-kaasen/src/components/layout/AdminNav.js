@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 
-function Navigation() {
+function AdminNav() {
   const [auth, setAuth] = useContext(AuthContext);
 
   const history = useHistory();

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+/*import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useAxios from "../../hooks/useAxios";
 
@@ -43,4 +43,4 @@ export default function PostList() {
       })}
     </ul>
   );
-}
+}*/

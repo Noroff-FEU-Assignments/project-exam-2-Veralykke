@@ -27,7 +27,7 @@ export default function LoginForm() {
     resolver: yupResolver(schema),
   });
 
-  const [auth, setAuth] = useContext(AuthContext);
+const [auth, setAuth] = useContext(AuthContext);
 
   async function onSubmit(data) {
     setSubmitting(true);
@@ -73,7 +73,6 @@ export default function LoginForm() {
 }
 
 /////////////bruke denne fra bootstrap
-
 /*return (
     <>
       <Heading title="Login to Admin" />
@@ -95,5 +94,5 @@ export default function LoginForm() {
         </Button>
       </Form>
     </>
-  );
-*/
+  );*/
+

@@ -1,4 +1,4 @@
-/*import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function AdmindMenu() {
     return (
@@ -6,4 +6,4 @@ export default function AdmindMenu() {
             Section: <Link to ="/admin/posts">Posts</Link>
         </nav>
     );
-}*/
+}
