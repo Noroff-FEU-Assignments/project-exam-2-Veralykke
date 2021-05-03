@@ -6,8 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
 import { BASE_API, TOKEN_PATH } from "../../constants/api";
-//import { Button, Form } from "react-bootstrap";
-import Heading from "../layout/Heading";
+import { Button, Form, FormControl } from "react-bootstrap";
 import AuthContext from "../context/AuthContext";
 
 const url = BASE_API + TOKEN_PATH;
@@ -27,7 +26,7 @@ export default function LoginForm() {
     resolver: yupResolver(schema),
   });
 
-const [auth, setAuth] = useContext(AuthContext);
+  const [auth, setAuth] = useContext(AuthContext);
 
   async function onSubmit(data) {
     setSubmitting(true);
@@ -39,7 +38,7 @@ const [auth, setAuth] = useContext(AuthContext);
       const response = await axios.post(url, data);
       console.log("response", response.data);
       setAuth(response.data);
-      history.push("/Admin");
+      history.push("/AdminPage");
     } catch (error) {
       console.log("error", error);
       setLoginError(error.toString());
@@ -49,14 +48,13 @@ const [auth, setAuth] = useContext(AuthContext);
   }
 
   return (
-    <>
-      <form onSubmit={handleSubmit(onSubmit)}>
+         <>
+ <form onSubmit={handleSubmit(onSubmit)}>
         {loginError && <FormError>{loginError}</FormError>}
         <fieldset disabled={submitting}>
           <div>
             <input name="username" placeholder="username" ref={register} />
           </div>
-
           <div>
             <input
               name="password"
@@ -72,27 +70,20 @@ const [auth, setAuth] = useContext(AuthContext);
   );
 }
 
-/////////////bruke denne fra bootstrap
-/*return (
-    <>
-      <Heading title="Login to Admin" />
-      <Form>
+      //////////////Bootstrap
+      /*{loginError && <FormError>{loginError}</FormError>}
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Username</Form.Label>
-          <Form.Control type="username" placeholder="Enter username" />
-          <Form.Text className="text-muted">
-            We'll never share your username with anyone else.
-          </Form.Text>
+          <Form.Control type="name" placeholder="Enter username" ref={register} />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control type="password" placeholder="Password" ref={register} />
         </Form.Group>
+        <input type="submit" value="Log In" />
         <Button variant="primary" type="submit">
-          Submit
+         Log in
         </Button>
-      </Form>
-    </>
-  );*/
-
+      </Form>*/
