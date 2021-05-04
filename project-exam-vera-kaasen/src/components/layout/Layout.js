@@ -49,7 +49,7 @@ function Layout() {
           <Route path="/contact" component={Contact} />
           <Route path="/loginPage" component={LoginPage} />
           {/*<Route path="/booking" component={Booking} />*/
-          <Route path="/admin" exact component={AdminPage} />
+          <Route path="/adminPage" exact component={AdminPage} />
          /* <Route path="/admin/posts" exact component={PostPage} />
           <Route path="/admin/posts/add" component={AddPost} />
   <       Route path="/admin/posts/edit/:id" component={EditPost} />*/}

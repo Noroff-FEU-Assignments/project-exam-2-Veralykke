@@ -1,5 +1,5 @@
 
-/*import { Button, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import Heading from "../layout/Heading";
@@ -75,7 +75,7 @@ export default function Booking() {
     </>
   );
 }
-*/
+
 
 //////////////////////////////////////////////////////////////////
 
