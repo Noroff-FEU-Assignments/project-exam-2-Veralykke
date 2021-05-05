@@ -1,7 +1,7 @@
-/*import { useStat, useEffect } from "react";
+import { useStat, useEffect } from "react";
 import { useParams} from "react-router-dom";
 import { useForm } from "react-hook-form";
-import * as yupm from "yup";
+import * as yup from "yup";
 import { yupResolver } from "@hookForm/resolvers/yup";
 import FormError from "../../common/FormError";
 import useAxios from "../../hooks/useAxios";
@@ -13,11 +13,12 @@ const schema = yup.object().shape({
 });
 
 export default function EditPost() {
-    const [post, estPost] = useState(null);
+    const [post, setPost] = useState(null);
     const [updated, setUpdated] = useState(false);
     const [fetchingPost, setFetchingPost] = useState(true);
     const [updatingPost, setUpdatingPost] = useState(false);
-    const [fetchError, setUpdateError] = useState(null);
+    const [fetchError, setFetchError] = useState(null);
+    const [updateError, setUpdateError] = useState(null);
 
     const { register, handleSubmit, errors } = useForm({
         resolver: yupResolver(schema),
@@ -27,7 +28,7 @@ export default function EditPost() {
 
     let { id } = useParams();
 
-    const url = `wp/v2/posts/${id}`;
+    const url = `posts/${id}`;
 
     useEffect(
     function () {
@@ -96,4 +97,4 @@ export default function EditPost() {
             </form>
         </AdminPage>
     );
-}*/
+}

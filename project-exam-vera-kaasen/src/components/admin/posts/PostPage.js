@@ -10,6 +10,7 @@ export default function PostPage() {
       <p>
         <link to="/Admin/posts/add">Add post</link>
       </p>
+      <p>List posts here</p>
       <PostList />
     </AdminPage>
   );

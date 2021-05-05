@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
-import {API } from "../../constants/api.js";
+import { BASE_API } from "../../constants/api.js";
 import { Link } from "react-router-dom";
 import useAxios from "../../components/hooks/useAxios";
 
-function MediaLiist({ register }) {
-  const [media, setMedia, ] = useState([]);
+export default function HotelImages({ register }) {
+  const [media, setMedia] = useState([]);
 
-
+  const http= useAxios();
 
   useEffect(function () {
     async function getMedia() {
       try {
-        const response = await http.get("wp/v2/media");
+        const response = await http.get("media")
+        console.log("response", response);
         setMedia(response.data);
       } catch (error) {
           console.log(error);
@@ -25,7 +26,6 @@ function MediaLiist({ register }) {
   return (
     <>
    <select name="featured_media" ref={register}>
-       <option value="">Select media</option>
        {media.map((media) => {
            return (
                <option key={media.id} value={media.id}>
@@ -38,4 +38,4 @@ function MediaLiist({ register }) {
   );
 }
 
-export default HotelList;
+
