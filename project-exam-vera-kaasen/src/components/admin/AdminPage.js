@@ -1,7 +1,8 @@
 import Heading from "../layout/Heading";
-import AdminNav from "../layout/AdminNav";
+import AdminNav from "../admin/posts/AdminNav";
 import AdminMenu from "./AdminMenu";
-import Nav from "react-bootstrap/Nav";
+
+//import Nav from "react-bootstrap/Nav";
 
 export default function AdminPage({ children }) {
   return (
@@ -12,7 +13,3 @@ export default function AdminPage({ children }) {
     </>
   );
 }
-
-
-
-

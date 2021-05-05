@@ -1,4 +1,4 @@
-import {  useContext } from "react";
+import { useContext } from "react";
 import axios from "axios";
 import AuthContext from "../context/AuthContext";
 import { BASE_API } from "../../constants/api";
@@ -6,17 +6,17 @@ import { BASE_API } from "../../constants/api";
 const url = BASE_API;
 
 export default function useAxios() {
-    const [auth] = useContext(AuthContext);
+  const [auth] = useContext(AuthContext);
 
-    const apiClient = axios.create({
-        baseURL: url,
-    });
+  const apiClient = axios.create({
+    baseURL: url,
+  });
 
-    apiClient.interceotors.request.use(function (config) {
-        const token = auth.token;
-        config.headers.Authorizations = token ? `Bearer ${token}` : "";
-        return config;
-    });
+  apiClient.interceptors.request.use(function (config) {
+    const token = auth.token;
+    config.headers.Authorizations = token ? `Bearer ${token}` : "";
+    return config;
+  });
 
-    return apiClient;
+  return apiClient;
 }

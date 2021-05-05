@@ -5,11 +5,11 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
-import { BASE_API, TOKEN_PATH } from "../../constants/api";
-import { Button, Form, FormControl } from "react-bootstrap";
+import { BASE_URL, TOKEN_PATH } from "../../constants/api";
+//import { Button, Form, FormControl } from "react-bootstrap";
 import AuthContext from "../context/AuthContext";
 
-const url = BASE_API + TOKEN_PATH;
+const url = BASE_URL + TOKEN_PATH;
 
 const schema = yup.object().shape({
   username: yup.string().required("please enter your username"),
@@ -38,7 +38,7 @@ export default function LoginForm() {
       const response = await axios.post(url, data);
       console.log("response", response.data);
       setAuth(response.data);
-      history.push("/AdminPage");
+      history.push("/adminPage");
     } catch (error) {
       console.log("error", error);
       setLoginError(error.toString());
@@ -48,8 +48,8 @@ export default function LoginForm() {
   }
 
   return (
-         <>
- <form onSubmit={handleSubmit(onSubmit)}>
+    <>
+      <form onSubmit={handleSubmit(onSubmit)}>
         {loginError && <FormError>{loginError}</FormError>}
         <fieldset disabled={submitting}>
           <div>
@@ -70,8 +70,8 @@ export default function LoginForm() {
   );
 }
 
-      //////////////Bootstrap
-      /*{loginError && <FormError>{loginError}</FormError>}
+//////////////Bootstrap
+/*{loginError && <FormError>{loginError}</FormError>}
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Username</Form.Label>

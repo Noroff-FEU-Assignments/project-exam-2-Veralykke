@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import { yupResolver } from "@hookForm/resolvers/yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../../common/FormError";
 import useAxios from "../../hooks/useAxios";
 //import HotelImages from "../HotelImages";
@@ -15,7 +15,7 @@ const schema = yup.object().shape({
 
 export default function AddPost() {
   const [submitting, setSubmitting] = useState(false);
-  const [serverError, setSErverError] = useState(null);
+  const [serverError, setServerError] = useState(null);
 
   const history = useHistory();
   const http = useAxios();
@@ -29,6 +29,10 @@ export default function AddPost() {
     setServerError(null);
 
     data.status = "publish";
+
+    if (data.featured_media === "") {
+      data.featured_media = null;
+    }
 
     console.log(data);
 
@@ -46,7 +50,7 @@ export default function AddPost() {
   return (
     <AdminPage>
       <Heading content="Add post" />
-      <form onSubmit={handleSubmit(onSumbit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         {serverError && <FormError>{serverError}</FormError>}
         <fieldset disabled={submitting}>
           <div>
@@ -57,7 +61,7 @@ export default function AddPost() {
           <div>
             <textarea name="content" placeholder="Content" ref={register} />
           </div>
-          <button>{submitting ? "Submitting..." : "Submit"}</button>
+          <input type="submit" value="Submit" />
         </fieldset>
       </form>
     </AdminPage>

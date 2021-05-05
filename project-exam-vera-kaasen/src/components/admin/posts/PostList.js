@@ -10,7 +10,7 @@ export default function PostList() {
   const http = useAxios();
 
   useEffect(function () {
-    async function etMedia() {
+    async function getMedia() {
       try {
         const response = await http.get("wp/v2/posts");
         console.log("response", response);

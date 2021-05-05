@@ -8,7 +8,7 @@ export default function PostPage() {
     <AdminPage>
       <Heading content="Posts" />
       <p>
-        <link to="/Admin/posts/add">Add post</link>
+        <Link to="/Admin/posts/add">Add post</Link>
       </p>
       <p>List posts here</p>
       <PostList />

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
-import AuthContext from "../context/AuthContext";
+import AuthContext from "../../context/AuthContext";
 
 function AdminNav() {
   const [auth, setAuth] = useContext(AuthContext);
@@ -17,11 +17,10 @@ function AdminNav() {
       <Link to="/">Home</Link>
       {auth ? (
         <>
-          | <Link to="/Admin"> Admin</Link> |
-          <button onClick={logout}>log out</button>
+          | <Link to="/Admin"> Admin</Link> | <button onClick={logout}>log out</button>
         </>
       ) : (
-        <Link to="/loginPage">Login</Link>
+        <Link to="/login">Login</Link>
       )}
     </nav>
   );
