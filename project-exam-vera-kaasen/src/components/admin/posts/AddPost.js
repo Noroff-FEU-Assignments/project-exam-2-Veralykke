@@ -8,6 +8,7 @@ import useAxios from "../../hooks/useAxios";
 //import HotelImages from "../HotelImages";
 import Heading from "../../layout/Heading";
 import AdminPage from "../AdminPage";
+import { Button, Form } from "react-bootstrap";
 
 const schema = yup.object().shape({
   title: yup.string().required("Title is required"),
@@ -61,7 +62,7 @@ export default function AddPost() {
           <div>
             <textarea name="content" placeholder="Content" ref={register} />
           </div>
-          <input type="submit" value="Submit" />
+          <Button type="submit">Submit</Button>
         </fieldset>
       </form>
     </AdminPage>

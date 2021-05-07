@@ -54,16 +54,13 @@ export default function LoginForm() {
         <fieldset disabled={submitting}>
           <div>
             <input name="username" placeholder="username" ref={register} />
+            {errors.username && <FormError>{errors.username.message}</FormError>}
           </div>
           <div>
-            <input
-              name="password"
-              placeholder="Password"
-              ref={register}
-              type="password"
-            />
+            <input name="password" placeholder="Password" ref={register} type="password"/>
+            {errors.password && <FormError>{errors.password.message}</FormError>}
           </div>
-          <input type="submit" value="Log In" />
+          <button>={"submitting" ? "Loggin In..." : "Login"}</button>
         </fieldset>
       </form>
     </>

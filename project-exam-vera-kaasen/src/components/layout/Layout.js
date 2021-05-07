@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Home from "../home/Home";
-//import HotelList from "../hotels/HotelList";
 import AllHotels from "../hotels/AllHotels";
 import HotelDetail from "../hotels/HotelDetail";
 import Contact from "../contact/Contact";
@@ -20,12 +19,13 @@ import PostPage from "../admin/posts/PostPage";
 import AddPost from "../admin/posts/AddPost";
 import EditPost from "../admin/posts/EditPost";
 import AdminPage from "../admin/AdminPage";
+ 
+//<AuthProvider>   </AuthProvider>
 
-//NB NB NB  SETT INN RUNDT LAYOUT: har satt på app.js  
 
 function Layout() {
   return (
-    <AuthProvider>  
+ 
     <Router>
       <Navbar bg="light" variant="light" expand="lg">
         <Navbar.Brand href="/">
@@ -41,6 +41,7 @@ function Layout() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      <AdminNav />
       <Container>
         <Switch>
           <Route path="/" exact component={Home} />
@@ -56,7 +57,7 @@ function Layout() {
         </Switch>
       </Container>
     </Router>
-    </AuthProvider>
+   
   );
 }
 

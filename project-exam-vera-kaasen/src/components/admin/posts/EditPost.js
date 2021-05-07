@@ -98,7 +98,6 @@ export default function EditPost() {
               ref={register}
             />
           </div>
-
           <button>Update</button>
         </fieldset>
       </form>
