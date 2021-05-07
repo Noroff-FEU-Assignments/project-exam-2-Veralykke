@@ -50,19 +50,16 @@ export default function AddPost() {
 
   return (
     <AdminPage>
-      <Heading content="Add post" />
-      <Heading title="Please fill out the form below" />
+      <Heading title="Create New Establishment" />
       <Form onSubmit={handleSubmit(onSubmit)}>
-        {serverError && <FormError>{serverError}</FormError>}
-        <fieldset disabled={submitting}>
+      {serverError && <FormError>{serverError}</FormError>}
+      <fieldset disabled={submitting}>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label></Form.Label>
-          <div>
-            <input name="title" placeholder="Title" ref={register} />
-            {errors.title && <FormError>{errors.title.message}</FormError>}
-          </div>
-          </Form.Group>
-          <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Control type="title" ref={register} placeholder="Title" />
+          {errors.title && <span>{errors.title.message}</span>}
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label></Form.Label>
           <Form.Control
             as="textarea"
@@ -72,9 +69,10 @@ export default function AddPost() {
           />
           {errors.message && <span>{errors.message.message}</span>}
         </Form.Group>
+        <Button type="submit">{submitting ? "Submitting..." : "Submit"}</Button>
         </fieldset>
-        <Button type="submit">Submit</Button>
       </Form>
     </AdminPage>
   );
 }
+
