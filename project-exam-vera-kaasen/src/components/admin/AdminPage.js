@@ -7,9 +7,11 @@ import AdminMenu from "./AdminMenu";
 export default function AdminPage({ children }) {
   return (
     <>
+    <AdminNav />
       <Heading title="Holidaze Admin" />
       <AdminMenu />
-      {children ? children : <p>Select a section</p>}
+      {children ? children : <p></p>}
+    
     </>
   );
 }

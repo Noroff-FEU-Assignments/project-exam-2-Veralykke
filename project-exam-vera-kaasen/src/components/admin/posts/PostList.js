@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useAxios from "../../hooks/useAxios";
+import { Card, Button, CardColumns } from "react-bootstrap";
 
 export default function PostList() {
   const [posts, setPosts] = useState([]);
@@ -31,16 +32,26 @@ export default function PostList() {
   if (error) return <div>{error}</div>;
 
   return (
-    <ul className="posts">
-      {posts.map((media) => {
-        return (
-          <li key={media.id}>
-            <Link to={`/Admin/posts/edit/${media.id}`}>
-              {media.title.rendered}
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <Card.Body>
+        <Card.Text>
+          <ul className="posts">
+            {posts.map((title) => {
+              return (
+                <Card.Title>
+                  <PostList>
+                <li key={title.id}>
+                  <Link to={`/Admin/posts/edit/${title.id}`}>
+                    {title.rendered}
+                  </Link>
+                </li>
+                </PostList>
+                </Card.Title>
+              );
+            })}
+          </ul>
+        </Card.Text>
+      </Card.Body>
+    </>
   );
 }
