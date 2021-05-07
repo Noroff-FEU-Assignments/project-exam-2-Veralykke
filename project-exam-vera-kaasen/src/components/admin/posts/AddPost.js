@@ -51,20 +51,30 @@ export default function AddPost() {
   return (
     <AdminPage>
       <Heading content="Add post" />
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <Heading title="Please fill out the form below" />
+      <Form onSubmit={handleSubmit(onSubmit)}>
         {serverError && <FormError>{serverError}</FormError>}
         <fieldset disabled={submitting}>
+        <Form.Group controlId="exampleForm.ControlInput1">
+          <Form.Label></Form.Label>
           <div>
             <input name="title" placeholder="Title" ref={register} />
             {errors.title && <FormError>{errors.title.message}</FormError>}
           </div>
-
-          <div>
-            <textarea name="content" placeholder="Content" ref={register} />
-          </div>
-          <Button type="submit">Submit</Button>
+          </Form.Group>
+          <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label></Form.Label>
+          <Form.Control
+            as="textarea"
+            placeholder="Message"
+            ref={register}
+            rows={3}
+          />
+          {errors.message && <span>{errors.message.message}</span>}
+        </Form.Group>
         </fieldset>
-      </form>
+        <Button type="submit">Submit</Button>
+      </Form>
     </AdminPage>
   );
 }
