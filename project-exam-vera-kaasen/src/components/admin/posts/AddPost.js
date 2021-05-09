@@ -9,6 +9,7 @@ import useAxios from "../../hooks/useAxios";
 import Heading from "../../layout/Heading";
 import AdminPage from "../AdminPage";
 import { Button, Form } from "react-bootstrap";
+import MediaDropdown from "./MediaDropdown";
 
 const schema = yup.object().shape({
   title: yup.string().required("Title is required"),
@@ -56,20 +57,30 @@ export default function AddPost() {
       <fieldset disabled={submitting}>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label></Form.Label>
-          <Form.Control type="title" ref={register} placeholder="Title" />
+          <Form.Control type="title" ref={register} placeholder="Name" />
           {errors.title && <span>{errors.title.message}</span>}
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label></Form.Label>
           <Form.Control
             as="textarea"
-            placeholder="Message"
+            placeholder="Description"
             ref={register}
             rows={3}
           />
           {errors.message && <span>{errors.message.message}</span>}
         </Form.Group>
-        <Button type="submit">{submitting ? "Submitting..." : "Submit"}</Button>
+
+
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label></Form.Label>
+          <div>
+          <MediaDropdown register={register} />
+        </div>
+          {errors.message && <span>{errors.message.message}</span>}
+        </Form.Group>
+
+        <Button type="Create">{submitting ? "Submitting..." : "Create"}</Button>
         </fieldset>
       </Form>
     </AdminPage>

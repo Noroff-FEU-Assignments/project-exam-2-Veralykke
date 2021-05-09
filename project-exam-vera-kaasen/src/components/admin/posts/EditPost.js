@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+/*import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -104,3 +104,4 @@ export default function EditPost() {
     </AdminPage>
   );
 }
+*/

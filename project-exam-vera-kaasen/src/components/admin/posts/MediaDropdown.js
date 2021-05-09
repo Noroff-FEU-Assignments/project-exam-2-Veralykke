@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { BASE_API } from "../../constants/api.js";
+import { BASE_API } from "../../../constants/api.js";
 import { Link } from "react-router-dom";
-import useAxios from "../../components/hooks/useAxios";
+import useAxios from "../../hooks/useAxios";
 
-export default function HotelImages({ register }) {
+export default function MediaDropdown({ register }) {
   const [media, setMedia] = useState([]);
 
   const http= useAxios();
