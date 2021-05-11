@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
 import { BASE_URL, TOKEN_PATH } from "../../constants/api";
-//import { Button, Form, FormControl } from "react-bootstrap";
+import { Button, Form, FormControl } from "react-bootstrap";
 import AuthContext from "../context/AuthContext";
 
 const url = BASE_URL + TOKEN_PATH;
@@ -52,27 +52,40 @@ export default function LoginForm() {
       <form onSubmit={handleSubmit(onSubmit)}>
         {loginError && <FormError>{loginError}</FormError>}
         <fieldset disabled={submitting}>
-          <div>
-            <input name="username" placeholder="username" ref={register} />
-            {errors.username && <FormError>{errors.username.message}</FormError>}
+          <div className="login">
+            <input className="login" name="username" placeholder="username" ref={register} />
+            {errors.username && (
+              <FormError>{errors.username.message}</FormError>
+            )}
           </div>
           <div>
-            <input name="password" placeholder="Password" ref={register} type="password"/>
-            {errors.password && <FormError>{errors.password.message}</FormError>}
+            <input 
+              name="password"
+              placeholder="Password"
+              ref={register}
+              type="password"
+            />
+            {errors.password && (
+              <FormError>{errors.password.message}</FormError>
+            )}
           </div>
-          <button>={"submitting" ? "Loggin In..." : "Login"}</button>
+        <Button variant="primary" type="submit">
+         Log in
+        </Button>
+          {/*<button>={"ubmitting" ? "Loggin In..." : "Login"}</button>*/}
         </fieldset>
       </form>
     </>
   );
 }
 
-//////////////Bootstrap
-/*{loginError && <FormError>{loginError}</FormError>}
+//////////////BOTSTRAP
+/*
+      {loginError && <FormError>{loginError}</FormError>}
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Username</Form.Label>
-          <Form.Control type="name" placeholder="Enter username" ref={register} />
+          <Form.Control type="text" placeholder="Enter username" ref={register} />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
@@ -83,4 +96,7 @@ export default function LoginForm() {
         <Button variant="primary" type="submit">
          Log in
         </Button>
-      </Form>*/
+        </Form>
+*/
+
+

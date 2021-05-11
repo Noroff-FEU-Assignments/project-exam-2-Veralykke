@@ -8,8 +8,8 @@ import useAxios from "../../hooks/useAxios";
 //import HotelImages from "../HotelImages";
 import Heading from "../../layout/Heading";
 import AdminPage from "../AdminPage";
-import { Button, Form } from "react-bootstrap";
-import MediaDropdown from "./MediaDropdown";
+import { Button, Form , Col} from "react-bootstrap";
+//import MediaDropdown from "./MediaDropdown";
 
 const schema = yup.object().shape({
   title: yup.string().required("Title is required"),
@@ -55,9 +55,35 @@ export default function AddPost() {
       <Form onSubmit={handleSubmit(onSubmit)}>
       {serverError && <FormError>{serverError}</FormError>}
       <fieldset disabled={submitting}>
+       <div>
+         <input name="title" placeholder="Title" ref={register} />
+         {errors.title && <FormError>{errors.title.message}</FormError>}
+       </div>
+
+<div>
+  <textarea name="content" placeholder="Content" ref={register} />
+</div>
+        <Button>{submitting ? "Submitting..." : "Create"}</Button>
+        </fieldset>
+      </Form>
+    </AdminPage>
+  );
+}
+
+/////////////////  BOOSTRAP
+/*<AdminPage>
+      <Heading title="Create New Establishment" />
+      <Form onSubmit={handleSubmit(onSubmit)}>
+      {serverError && <FormError>{serverError}</FormError>}
+      <fieldset disabled={submitting}>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label></Form.Label>
           <Form.Control type="title" ref={register} placeholder="Name" />
+          {errors.title && <span>{errors.title.message}</span>}
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlInput1">
+          <Form.Label></Form.Label>
+          <Form.Control type="title" ref={register} placeholder="Price" />
           {errors.title && <span>{errors.title.message}</span>}
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -74,16 +100,12 @@ export default function AddPost() {
 
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label></Form.Label>
-          <div>
+         {/*} <div>
           <MediaDropdown register={register} />
-        </div>
-          {errors.message && <span>{errors.message.message}</span>}
-        </Form.Group>
+  </div>*//*}
+  {errors.message && <span>{errors.message.message}</span>}
+  </Form.Group>
 
-        <Button type="Create">{submitting ? "Submitting..." : "Create"}</Button>
-        </fieldset>
-      </Form>
-    </AdminPage>
-  );
-}
-
+  <Button type="Create">{submitting ? "Submitting..." : "Create"}</Button>
+  </fieldset>
+</Form>*/ 

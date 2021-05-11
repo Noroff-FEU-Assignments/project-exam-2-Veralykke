@@ -42,25 +42,25 @@ function AllHotels() {
 
   return (
     <>
-          <Card.Body>
-            <Card.Text>
-              <div className="hotels">
-                {hotels.map(function (hotel) {
-                  const { id, title, content } = hotel;
-                  return (
-                    <Card.Title>
-                      <HotelItem
-                        key={id}
-                        id={id}
-                        slug={title.rendered}
-                        excerpt={content.rendered}
-                      />
-                    </Card.Title>
-                  );
-                })}
-              </div>
-            </Card.Text>
-          </Card.Body>
+      <Card.Body>
+        <Card.Text>
+          <div className="hotels">
+            {hotels.map(function (hotel) {
+              const { id, title, content } = hotel;
+              return (
+                <Card.Title>
+                  <HotelItem
+                    key={id}
+                    id={id}
+                    slug={title.rendered}
+                    excerpt={content.rendered}
+                  />
+                </Card.Title>
+              );
+            })}
+          </div>
+        </Card.Text>
+      </Card.Body>
     </>
   );
 }

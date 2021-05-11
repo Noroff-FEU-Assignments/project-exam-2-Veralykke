@@ -7,6 +7,7 @@ import HotelItem from "./HotelItem";
 import FigureCaption from 'react-bootstrap/FigureCaption';
 import FigureImage from 'react-bootstrap/FigureImage'*/
 import { Card, Button, CardColumns } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function HotelDetail() {
   const [hotel, setHotel] = useState(null);
@@ -57,25 +58,11 @@ function HotelDetail() {
         slug={hotel.title.rendered}
         excerpt={hotel.content.rendered}
       />
+      <Link to={`/booking/${id}`}>
+        <Button variant="primary">Book</Button>
+      </Link>
     </>
   );
 }
 
 export default HotelDetail;
-
-/////
-/*<Figure>
-<Figure.Image
-  width={171}
-  height={180}
-  alt="171x180"
-  src="holder.js/171x180"
-/>
-<Figure.Caption>
-  <div className="hotel-detail">
-    <h1>{hotel.title}</h1>
-  </div>
-  <p>hshrshs</p>
-  <Button type="submit">Submit</Button>
-</Figure.Caption>
-</Figure>*/

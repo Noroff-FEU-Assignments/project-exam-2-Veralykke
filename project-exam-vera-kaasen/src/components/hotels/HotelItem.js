@@ -1,14 +1,23 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { Card, Button, CardColumns } from "react-bootstrap";
+import {
+  Card,
+  Button,
+  CardColumns,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
+
 
 function HotelItem({ id, slug, excerpt }) {
   return (
-    <CardColumns>
-      <Card style={{ width: "18rem" }}>
+    <div className="container">
+      <div class="row" md={2}>
+      <Card className="mt-4" style={{ width: "18 rem" }}>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
-          <Link to={`${id}`}>
+          <Link to={`/hotel/${id}`}>
             <span className="card-info one">jsnjn</span>
             <span className="card-info two">jnkni</span>
             <Card.Title>
@@ -21,7 +30,8 @@ function HotelItem({ id, slug, excerpt }) {
           </Link>
         </Card.Body>
       </Card>
-    </CardColumns>
+      </div>
+      </div>
   );
 }
 

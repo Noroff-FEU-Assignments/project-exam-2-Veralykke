@@ -47,7 +47,7 @@ function HotelList({ search }) {
     <>
       <div className="hotels">
         {filteredHotels.map(function (hotel) {
-          const { id, title } = hotel;
+          const { id } = hotel;
           return (
             <Link to={`/hotel/${id}`}>
               <h5>{hotel.title.rendered}</h5>

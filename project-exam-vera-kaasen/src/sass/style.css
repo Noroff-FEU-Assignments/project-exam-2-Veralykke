@@ -1,10 +1,18 @@
 body {
-  min-height: 100vh !important;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  /*min-height: 100vh !important;*/
   background: #FCFCFC !important;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Lato", sans-serif !important;
   color: #191919 !important;
+  position: absolute !important;
 }
 
+/*
+.screen-height {
+    height: 75vh;
+}*/
 h1 {
   font-size: 1.5rem !important;
   margin: 2rem 0 2rem 0 !important;
@@ -79,7 +87,6 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 .card {
   border-radius: 1.25rem !important;
   margin-top: 65px;
-  /*width: 20.5rem !important;*/
 }
 
 .card-info {
@@ -100,49 +107,53 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 
 .h1-home {
   margin-left: 18px !important;
-  position: relative !important;
+  position: absolute !important;
   color: #FCFCFC !important;
+  margin-bottom: 450px;
+  z-index: 1;
+  top: 16%;
 }
 
 .txt-home {
   color: #FCFCFC !important;
-  position: relative;
+  position: absolute;
+  top: 14%;
+  z-index: 1;
+}
+
+.txt-home-two {
+  color: #FCFCFC !important;
+  position: absolute;
+  top: 27%;
+  z-index: 1;
 }
 
 .mr-sm-2 {
-  width: 150px !important;
+  width: 28% !important;
   border-radius: 1rem !important;
   border: 2px solid #FFD651 !important;
-  position: relative !important;
-  margin: 0 auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: absolute !important;
+  margin: 0 auto !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 100px;
+  top: 32%;
+  left: 38%;
+  z-index: 1;
 }
 
-.img-fluid {
-  position: absolute;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: auto;
+@media (min-width: 576px) {
+  .mr-sm-2, .mx-sm-2 {
+    margin-right: 0rem !important;
+  }
 }
 
-.home-container {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+.image-home {
+  width: 100%;
+  height: auto;
 }
-
-/*.jumbotron {
-    url("https://unsplash.com/photos/Acuc51Q2gAg") no-repeat center center;
-    background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -webkit-background-sixe: 100% 100%;
-    -o-background-size: 100% 100%;
-    height: calc(100vh);
-}
-*/
 /*# sourceMappingURL=style.css.map */

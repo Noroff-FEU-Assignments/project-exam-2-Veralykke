@@ -21,11 +21,10 @@ import EditPost from "../admin/posts/EditPost";
 import AdminPage from "../admin/AdminPage";
  
 //<AuthProvider>   </AuthProvider>
-
+//<AdminNav />
 
 function Layout() {
   return (
- 
     <Router>
       <Navbar bg="light" variant="light" expand="lg">
         <Navbar.Brand href="/">
@@ -41,7 +40,7 @@ function Layout() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <AdminNav />
+   
       <Container>
         <Switch>
           <Route path="/" exact component={Home} />
@@ -57,7 +56,6 @@ function Layout() {
         </Switch>
       </Container>
     </Router>
-   
   );
 }
 
