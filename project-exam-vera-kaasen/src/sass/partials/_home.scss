@@ -2,19 +2,19 @@
 .h1-home {
     margin-left: 18px !important;
     position: absolute !important;
-    color:$colour-background !important;
+    /*color:$colour-background !important;*/
     margin-bottom: 450px;
     z-index: 1;
     top: 16%;
 }
 .txt-home {
-    color:$colour-background !important;
+    /*color:$colour-background !important;*/
     position: absolute;
     top: 14%;
     z-index: 1;
 }
 .txt-home-two {
-    color:$colour-background !important;
+    /*color:$colour-background !important;*/
     position: absolute;
     top: 27%;
     z-index: 1;
@@ -41,12 +41,15 @@
         margin-right: .0rem!important; 
    }
    .image-home {
-
+    background-position-x: -450px !important;
+    background-position-y: -550px !important;
    }
 }
 
 .image-home {
 width:100%;
 height: auto;
+
+   
 }
 

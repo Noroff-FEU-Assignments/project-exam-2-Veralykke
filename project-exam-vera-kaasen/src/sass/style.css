@@ -108,21 +108,21 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 .h1-home {
   margin-left: 18px !important;
   position: absolute !important;
-  color: #FCFCFC !important;
+  /*color:$colour-background !important;*/
   margin-bottom: 450px;
   z-index: 1;
   top: 16%;
 }
 
 .txt-home {
-  color: #FCFCFC !important;
+  /*color:$colour-background !important;*/
   position: absolute;
   top: 14%;
   z-index: 1;
 }
 
 .txt-home-two {
-  color: #FCFCFC !important;
+  /*color:$colour-background !important;*/
   position: absolute;
   top: 27%;
   z-index: 1;
@@ -149,6 +149,10 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 @media (min-width: 576px) {
   .mr-sm-2, .mx-sm-2 {
     margin-right: 0rem !important;
+  }
+  .image-home {
+    background-position-x: -450px !important;
+    background-position-y: -550px !important;
   }
 }
 
