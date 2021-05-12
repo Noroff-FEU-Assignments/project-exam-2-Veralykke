@@ -8,6 +8,9 @@ import FigureCaption from 'react-bootstrap/FigureCaption';
 import FigureImage from 'react-bootstrap/FigureImage'*/
 import { Card, Button, CardColumns } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import * as React from "react";
+import { useGoogleMaps } from "react-hook-google-maps";
+import MapBergen from "../map/MapBergen";
 
 function HotelDetail() {
   const [hotel, setHotel] = useState(null);
@@ -66,3 +69,5 @@ function HotelDetail() {
 }
 
 export default HotelDetail;
+
+
