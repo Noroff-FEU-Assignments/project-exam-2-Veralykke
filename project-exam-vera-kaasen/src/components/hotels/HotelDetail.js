@@ -69,5 +69,3 @@ function HotelDetail() {
 }
 
 export default HotelDetail;
-
-

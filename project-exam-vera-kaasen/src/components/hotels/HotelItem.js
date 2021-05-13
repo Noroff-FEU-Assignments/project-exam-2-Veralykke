@@ -10,30 +10,29 @@ import {
 } from "react-bootstrap";
 import MapBergen from "../map/MapBergen";
 
-
-function HotelItem({ id, slug, excerpt }) {
+function HotelItem({ id, slug, excerpt, guests, price, image }) {
   return (
     <div className="container">
       <div class="row" md={2}>
-      <Card className="mt-4" style={{ width: "18 rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Link to={`/hotel/${id}`}>
-            <span className="card-info one">jsnjn</span>
-            <span className="card-info two">jnkni</span>
-            <Card.Title>
-              <h5>{slug}</h5>
-            </Card.Title>
-            <Card.Text>
-              <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
-            </Card.Text>
-            <Button variant="primary">Read more</Button>
-          </Link>
-          <MapBergen/>
-        </Card.Body>
-      </Card>
+        <Card className="mt-4" style={{ width: "18 rem" }}>
+          <Card.Img variant="top" src={image} />
+          <Card.Body>
+            <Link to={`/hotel/${id}`}>
+              <span className="card-info one">Max {guests}</span>
+              <span className="card-info two">Price from {price}$</span>
+              <Card.Title>
+                <h5>{slug}</h5>
+              </Card.Title>
+              <Card.Text>
+                <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
+              </Card.Text>
+              <Button variant="primary">Read more</Button>
+            </Link>
+            <MapBergen />
+          </Card.Body>
+        </Card>
       </div>
-      </div>
+    </div>
   );
 }
 

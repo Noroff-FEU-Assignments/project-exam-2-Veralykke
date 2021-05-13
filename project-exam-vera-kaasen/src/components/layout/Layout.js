@@ -17,7 +17,6 @@ import { AuthProvider } from "../context/AuthContext";
 import AdminNav from "../admin/posts/AdminNav";
 import PostPage from "../admin/posts/PostPage";
 import AddPost from "../admin/posts/AddPost";
-import EditPost from "../admin/posts/EditPost";
 import AdminPage from "../admin/AdminPage";
  
 //<AuthProvider>   </AuthProvider>
@@ -52,7 +51,6 @@ function Layout() {
           <Route path="/adminPage" exact component={AdminPage} />
           <Route path="/admin/posts" exact component={PostPage} />
           <Route path="/admin/posts/add" component={AddPost} />
-         <Route path="/admin/posts/edit/:id" component={EditPost} />
         </Switch>
       </Container>
     </Router>

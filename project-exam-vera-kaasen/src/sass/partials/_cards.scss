@@ -1,6 +1,10 @@
 .card {
     border-radius: 1.25rem !important;
     margin-top: 65px;
+    .card-img, .card-img-top {
+        border-top-left-radius: calc(1.25rem - 1px) !important;
+        border-top-right-radius: calc(1.25rem - 1px) !important;
+    }
   
 }
 .card-info {
@@ -10,6 +14,8 @@ color: $colour-ui-shadow !important;
 border-radius: 5px !important;
 
 }
+
+
 .card-title.h5 {
     margin-top: 80px !important;
     font-size: 1em  !important;
@@ -17,11 +23,12 @@ border-radius: 5px !important;
 
 .one {
 margin-right: 20px;
+
 }
 
 
 .map {
-   padding:0px 20px 22px 0px;
+    padding:28px 0px 28px 0px;
     width: 100%;
     height: auto;
     left: 0px;

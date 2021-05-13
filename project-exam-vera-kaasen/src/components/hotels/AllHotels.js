@@ -46,7 +46,14 @@ function AllHotels() {
         <Card.Text>
           <div className="hotels">
             {hotels.map(function (hotel) {
-              const { id, title, content } = hotel;
+              const {
+                id,
+                title,
+                content,
+                guests,
+                price,
+                better_featured_image,
+              } = hotel;
               return (
                 <Card.Title>
                   <HotelItem
@@ -54,8 +61,12 @@ function AllHotels() {
                     id={id}
                     slug={title.rendered}
                     excerpt={content.rendered}
+                    guests={guests}
+                    price={price}
+                    image={better_featured_image.source_url}
                   />
                 </Card.Title>
+                
               );
             })}
           </div>

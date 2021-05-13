@@ -34,18 +34,29 @@ export default function Contact() {
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label></Form.Label>
-          <Form.Control type="name" ref={register} placeholder="Full name" />
+          <Form.Control
+            type="name"
+            name="name"
+            ref={register}
+            placeholder="Full name"
+          />
           {errors.name && <span>{errors.name.message}</span>}
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label></Form.Label>
-          <Form.Control type="email" ref={register} placeholder="Email" />
+          <Form.Control
+            type="email"
+            name="email"
+            ref={register}
+            placeholder="Email"
+          />
           {errors.email && <span>{errors.email.message}</span>}
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Label></Form.Label>
           <Form.Control
             as="textarea"
+            name="message"
             placeholder="Message"
             ref={register}
             rows={3}

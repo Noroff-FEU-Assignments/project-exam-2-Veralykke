@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   height: 100%;
@@ -105,6 +109,14 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
   margin-right: 20px;
 }
 
+.map {
+  padding: 28px 0px 28px 0px;
+  width: 100%;
+  height: auto;
+  left: 0px;
+  border: 0;
+}
+
 .h1-home {
   margin-left: 18px !important;
   position: absolute !important;
@@ -159,5 +171,9 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 .image-home {
   width: 100%;
   height: auto;
+}
+
+.form-control {
+  font-size: 0.8rem !important;
 }
 /*# sourceMappingURL=style.css.map */

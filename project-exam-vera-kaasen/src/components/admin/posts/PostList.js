@@ -41,7 +41,7 @@ export default function PostList() {
                 <Card.Title>
                   <PostList>
                 <li key={title.id}>
-                  <Link to={`/Admin/posts/edit/${title.id}`}>
+                  <Link to={`/Admin/posts/${title.id}`}>
                     {title.rendered}
                   </Link>
                 </li>
