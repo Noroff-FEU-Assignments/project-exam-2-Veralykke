@@ -66,7 +66,6 @@ function AllHotels() {
                     image={better_featured_image.source_url}
                   />
                 </Card.Title>
-                
               );
             })}
           </div>

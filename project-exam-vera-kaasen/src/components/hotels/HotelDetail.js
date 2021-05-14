@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { BASE_API } from "../../constants/api.js";
-import HotelItem from "./HotelItem";
-//import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
-/*import Figure from "react-bootstrap/Figure";
-import FigureCaption from 'react-bootstrap/FigureCaption';
-import FigureImage from 'react-bootstrap/FigureImage'*/
+import HotelItemDetail from "./HotelItemDetail";
 import { Card, Button, CardColumns } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import * as React from "react";
@@ -55,15 +51,13 @@ function HotelDetail() {
 
   return (
     <>
-      <HotelItem
+      <HotelItemDetail
         key={hotel.id}
         id={hotel.id}
         slug={hotel.title.rendered}
         excerpt={hotel.content.rendered}
+        image={hotel.better_featured_image.source_url}
       />
-      <Link to={`/booking/${id}`}>
-        <Button variant="primary">Book</Button>
-      </Link>
     </>
   );
 }

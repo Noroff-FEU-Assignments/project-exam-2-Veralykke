@@ -1,7 +1,5 @@
 import Nav from "react-bootstrap/Nav";
-import {
-  FontAwesomeIcon,
-} from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
@@ -24,16 +22,16 @@ const Footer = () => {
           <FontAwesomeIcon icon={faTwitter} size="2x" />
         </a>
         <div className="link-footer">
-        <Nav defaultActiveKey="/home" className="flex-column">
-          <div className="row">
-            <div className="col">
-              <Nav.Link href="/contact">Contact</Nav.Link>
+          <Nav defaultActiveKey="/home" className="flex-column">
+            <div className="row">
+              <div className="col">
+                <Nav.Link href="/contact">Contact</Nav.Link>
+              </div>
+              <div className="col">
+                <Nav.Link href="/LoginPage">Admin</Nav.Link>
+              </div>
             </div>
-            <div className="col">
-              <Nav.Link href="/login">Admin</Nav.Link>
-            </div>
-          </div>
-        </Nav>
+          </Nav>
         </div>
       </div>
     </>

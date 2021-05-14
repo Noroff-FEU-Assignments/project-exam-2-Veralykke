@@ -8,7 +8,6 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
-import MapBergen from "../map/MapBergen";
 
 function HotelItem({ id, slug, excerpt, guests, price, image }) {
   return (
@@ -28,7 +27,6 @@ function HotelItem({ id, slug, excerpt, guests, price, image }) {
               </Card.Text>
               <Button variant="primary">Read more</Button>
             </Link>
-            <MapBergen />
           </Card.Body>
         </Card>
       </div>

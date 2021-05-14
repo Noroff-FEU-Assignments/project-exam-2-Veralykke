@@ -3,7 +3,8 @@ import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-
+import { useState } from "react";
+import useAxios from "../hooks/useAxios";
 const schema = yup.object().shape({
   name: yup.string().required("Please enter your name"),
   email: yup
@@ -17,12 +18,34 @@ const schema = yup.object().shape({
 });
 
 export default function Contact() {
+  const [submitting, setSubmitting] = useState(false);
+  const [serverError, setServerError] = useState(null);
+  const http = useAxios();
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
 
-  function onSubmit(data) {
+  async function onSubmit(data) {
+    setSubmitting(true);
+    setServerError(null);
+
+    data.status = "publish";
+
+    if (data.featured_media === "") {
+      data.featured_media = null;
+    }
+
     console.log(data);
+
+    try {
+      const response = await http.post("/contact", data);
+      console.log("response", response.data);
+    } catch (error) {
+      console.log("error", error);
+      setServerError(error.toString());
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   console.log(errors);

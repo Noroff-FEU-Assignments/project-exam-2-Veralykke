@@ -39,7 +39,7 @@ export default function AddPost() {
     console.log(data);
 
     try {
-      const response = await http.post("/wp/v2/posts", data);
+      const response = await http.post("/posts", data);
       console.log("response", response.data);
     } catch (error) {
       console.log("error", error);
@@ -54,7 +54,7 @@ export default function AddPost() {
       <Heading title="Create New Establishment" />
       <Form onSubmit={handleSubmit(onSubmit)}>
       {serverError && <FormError>{serverError}</FormError>}
-      <fieldset disabled={submitting}>
+     <fieldset disabled={submitting}>
        <div>
          <input name="title" placeholder="Title" ref={register} />
          {errors.title && <FormError>{errors.title.message}</FormError>}
@@ -63,7 +63,7 @@ export default function AddPost() {
 <div>
   <textarea name="content" placeholder="Content" ref={register} />
 </div>
-        <Button>{submitting ? "Submitting..." : "Create"}</Button>
+        <Button type="submit">Create</Button>
         </fieldset>
       </Form>
     </AdminPage>

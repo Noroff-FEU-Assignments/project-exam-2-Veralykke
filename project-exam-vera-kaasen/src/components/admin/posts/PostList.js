@@ -2,55 +2,56 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useAxios from "../../hooks/useAxios";
 import { Card, Button, CardColumns } from "react-bootstrap";
-
+import { BASE_API } from "../../../constants/api.js";
 export default function PostList() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const http = useAxios();
+  const allPosts = BASE_API + "contact";
 
   useEffect(function () {
-    async function getMedia() {
+    async function fetchData() {
       try {
-        const response = await http.get("wp/v2/posts");
-        console.log("response", response);
-        setPosts(response.data);
+        const response = await fetch(allPosts);
+
+        if (response.ok) {
+          const json = await response.json();
+          setPosts(json);
+        } else {
+          setError("An error occured");
+        }
       } catch (error) {
-        console.log(error);
         setError(error.toString());
       } finally {
         setLoading(false);
       }
     }
-
-    getMedia();
+    fetchData();
   }, []);
 
-  if (loading) return <div>Loading posts...</div>;
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-  if (error) return <div>{error}</div>;
+  if (error) {
+    return <div>ERROR: An error occured</div>;
+  }
 
   return (
     <>
       <Card.Body>
-        <Card.Text>
-          <ul className="posts">
-            {posts.map((title) => {
-              return (
-                <Card.Title>
-                  <PostList>
-                <li key={title.id}>
-                  <Link to={`/Admin/posts/${title.id}`}>
-                    {title.rendered}
-                  </Link>
-                </li>
-                </PostList>
-                </Card.Title>
-              );
-            })}
-          </ul>
-        </Card.Text>
+        <ul>
+          {posts.map((post) => {
+            return (
+              <li>
+                <Link to={`/Admin/posts/${post.id}`}>
+                  {post.title.rendered}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </Card.Body>
     </>
   );
