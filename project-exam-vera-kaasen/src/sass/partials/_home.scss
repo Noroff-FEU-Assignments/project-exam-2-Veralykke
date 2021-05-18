@@ -1,22 +1,11 @@
 .h1-home {
     margin-left: 18px !important;
-    /*color:$colour-background !important;*/
+    color:$colour-background !important;
     margin-bottom: 450px;
     z-index: 1;
     top: 16%;
 }
-.txt-home {
-    /*color:$colour-background !important;*/
-    
-    top: 27%;
-    z-index: 1;
-}
-.txt-home-two {
-    /*color:$colour-background !important;*/
-    
-    top: 30%;
-    z-index: 1;
-}
+
 
 .mr-sm-2 {
     width: 28% !important;
@@ -27,52 +16,34 @@
     align-items: center !important;
     display: flex;
     margin-top: 100px;
-    top: 32%;
+    top: 38%;
     left: 38%;
     z-index: 1;
 
 }  
-/*
-@media (min-width: 576px) {
-    .mr-sm-2, .mx-sm-2 {
-        margin-right: .0rem!important; 
-   }
-   .image-home {
-    background-position-x: -450px !important;
-    background-position-y: -550px !important;
-   }
-}*/
 
 .image-home {
     background-image: url("https://images.unsplash.com/photo-1581000062376-936bff7c54d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
     width:100%;
     height: 35rem;
     background-repeat: no-repeat; 
-    /*background-position-x: -450px !important;
-    background-position-y: -550px !important;*/
+    background-position-x: -150px;
+    background-position-y: -21px;
+    max-width: 1079px;
 
+    
 }
 
-
-
-
-/*
-.container-home{
-    background-image: url(./bergen.jpg);
-    height: 50vh;
-    background-size: cover;
-    max-width: 100vw !important;
+.box-home {
+    margin-left: 45px !important;
+    margin-top: 45px !important;
 }
 
-
-@media (min-width: 576px) {
-    .container{
-        height: 60vh;
-        
+@media screen and (min-width: 992px) {
+    .image-home {
+        background-position-x: 0px;
+        background-position-y: 0px;
     }
-}
-@media (min-width: 768px) {
-    .container{
-        height: 70vh;
-    }
-}*/
+  }
+
+ 

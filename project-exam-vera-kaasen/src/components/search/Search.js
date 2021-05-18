@@ -1,7 +1,5 @@
 import React from "react";
 //import axios from "axios";
-//import { BASE_API } from "../../constants/api.js";
-//import HotelItem from "../hotels/HotelItem";
 import { useState } from "react";
 import HotelList from "../hotels/HotelList";
 

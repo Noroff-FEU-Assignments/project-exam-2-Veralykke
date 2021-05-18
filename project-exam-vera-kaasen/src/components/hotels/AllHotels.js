@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { BASE_API } from "../../constants/api.js";
 import HotelItem from "./HotelItem";
-import { Card, Button, CardColumns } from "react-bootstrap";
-/*import { Button } from "react-bootstrap";
-import CardColumns from "react-bootstrap/CardColumns";*/
+import { Card, CardColumns } from "react-bootstrap";
 
 function AllHotels() {
   const [hotels, setHotels] = useState([]);

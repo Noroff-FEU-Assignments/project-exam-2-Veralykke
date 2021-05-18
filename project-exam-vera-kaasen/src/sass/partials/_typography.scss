@@ -1,6 +1,6 @@
 h1 {
-    font-size: 1.5rem !important;
-    margin: 2rem 0 2rem 0 !important;
+    font-size: 1.8rem !important;
+    margin: 4rem 0 2rem 0 !important;
 }
 
 p {
@@ -9,4 +9,18 @@ p {
 h5 {
     margin: -42px 0px 24px 0px !important;
     color: $colour-primary;
+}
+
+.txt-home {
+    color:$colour-background !important;
+    top: 27%;
+    z-index: 1;
+    margin: -4px 0px 24px 0px !important;
+
+
+}
+.txt-home-two {
+    color:$colour-background !important;
+    top: 30%;
+    z-index: 1;
 }
