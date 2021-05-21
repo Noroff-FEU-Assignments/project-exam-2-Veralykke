@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
 import { BASE_URL, TOKEN_PATH } from "../../constants/api";
-import { Button, Form, FormControl } from "react-bootstrap";
+import { Button, Form, FormControl, FormGroup } from "react-bootstrap";
 import AuthContext from "../context/AuthContext";
 
 const url = BASE_URL + TOKEN_PATH;
@@ -32,7 +32,6 @@ export default function LoginForm() {
     setSubmitting(true);
     setLoginError(null);
 
-    //console.log(data);
 
     try {
       const response = await axios.post(url, data);
@@ -52,8 +51,21 @@ export default function LoginForm() {
       <form onSubmit={handleSubmit(onSubmit)}>
         {loginError && <FormError>{loginError}</FormError>}
         <fieldset disabled={submitting}>
-          <div className="login">
-            <input className="login" name="username" placeholder="username" ref={register} />
+
+        <Form.Group controlId="exampleForm.ControlInput1">
+          <Form.Label></Form.Label>
+          <Form.Control className="login" type="username" ref={register} placeholder="*Username" />
+          {errors.username && <span>{errors.username.message}</span>}
+        </Form.Group>
+
+        <Form.Group controlId="exampleForm.ControlInput1">
+          <Form.Label></Form.Label>
+          <Form.Control type="password" ref={register} placeholder="*Password" />
+          {errors.password && <span>{errors.password.message}</span>}
+        </Form.Group>
+
+          {/*<div className="login">
+            <input className="login" name="username" placeholder="Username" ref={register} />
             {errors.username && (
               <FormError>{errors.username.message}</FormError>
             )}
@@ -68,7 +80,7 @@ export default function LoginForm() {
             {errors.password && (
               <FormError>{errors.password.message}</FormError>
             )}
-          </div>
+            </div>*/}
         <Button variant="primary" type="submit">
          Log in
         </Button>
@@ -79,24 +91,5 @@ export default function LoginForm() {
   );
 }
 
-//////////////BOTSTRAP
-/*
-      {loginError && <FormError>{loginError}</FormError>}
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Label>Username</Form.Label>
-          <Form.Control type="text" placeholder="Enter username" ref={register} />
-        </Form.Group>
-
-        <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" ref={register} />
-        </Form.Group>
-        <input type="submit" value="Log In" />
-        <Button variant="primary" type="submit">
-         Log in
-        </Button>
-        </Form>
-*/
 
 

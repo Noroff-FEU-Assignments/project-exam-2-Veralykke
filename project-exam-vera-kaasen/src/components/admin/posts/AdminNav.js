@@ -14,7 +14,7 @@ function AdminNav() {
 
   return (
     <nav>
-      <Link to="/">Home</Link>
+      <Link to="/">Home </Link>
       {auth ? (
         <>
           | <Link to="/Admin"> Admin</Link> | <button onClick={logout}>log out</button>

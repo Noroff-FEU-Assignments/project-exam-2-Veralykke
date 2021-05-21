@@ -11,7 +11,6 @@ export default function AdminPage({ children }) {
       <Heading title="Holidaze Admin" />
       <AdminMenu />
       {children ? children : <p></p>}
-    
     </>
   );
 }

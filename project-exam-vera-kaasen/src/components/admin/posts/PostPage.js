@@ -17,11 +17,6 @@ export default function PostPage() {
             <p>Enquiries:</p>
             <PostList />
           </ListGroup.Item>
-          <ListGroup.Item>
-            <p>
-              <Link to="/Admin/posts/add">Create New Establishment</Link>
-            </p>
-          </ListGroup.Item>
         </AdminPage>
       </ListGroup>
     </Container>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import useAxios from "../../hooks/useAxios";
 
 export default function MediaDropdown({ register }) {
-  const [media, setMedia] = useState([]);
+  const [better_featured_image, setMedia] = useState([]);
 
   const http= useAxios();
 
@@ -26,10 +26,10 @@ export default function MediaDropdown({ register }) {
   return (
     <>
    <select name="featured_media" ref={register}>
-       {media.map((media) => {
+       {better_featured_image.map((better_featured_image) => {
            return (
-               <option key={media.id} value={media.id}>
-                   {media.title.rendered}
+               <option key={better_featured_image.id} value={better_featured_image.id}>
+                   {better_featured_image.source_url}
                </option>
            );
        })}
