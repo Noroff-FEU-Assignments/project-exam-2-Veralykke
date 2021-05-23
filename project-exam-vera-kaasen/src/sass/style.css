@@ -6,7 +6,6 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  /*min-height: 100vh !important;*/
   background: #FCFCFC !important;
   font-family: "Lato", sans-serif !important;
   color: #191919 !important;
@@ -23,7 +22,6 @@ p {
 }
 
 h5 {
-  margin: -42px 0px 24px 0px !important;
   color: #191919;
 }
 
@@ -139,11 +137,20 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
   top: 16%;
 }
 
-.mr-sm-2 {
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.searchbar {
   width: 28% !important;
   border-radius: 1rem !important;
-  border: 2.2px solid #FFD651 !important;
-  position: absolute !important;
+  border: 1.2px solid #FFD651 !important;
   margin: 0 auto !important;
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
@@ -155,6 +162,20 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
   top: 38%;
   left: 38%;
   z-index: 1;
+}
+
+.search .hotels {
+  border-radius: 0.8rem !important;
+  background-color: white;
+  width: 28% !important;
+  margin: 0 auto !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+.search .hotels a h5 {
+  color: black !important;
 }
 
 .image-home {

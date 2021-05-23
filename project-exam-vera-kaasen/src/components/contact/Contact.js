@@ -5,6 +5,9 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import useAxios from "../hooks/useAxios";
+import axios from "axios";
+const url = "";
+
 const schema = yup.object().shape({
   name: yup.string().required("Please enter your name"),
   email: yup
@@ -31,12 +34,7 @@ export default function Contact() {
 
     data.status = "publish";
 
-    if (data.featured_media === "") {
-      data.featured_media = null;
-    }
-
     console.log(data);
-
     try {
       const response = await http.post("/contact", data);
       console.log("response", response.data);
@@ -47,16 +45,21 @@ export default function Contact() {
       setSubmitting(false);
     }
   }
-
   console.log(errors);
 
   //NB: MÅ HUSKE LEGGE TIL REGULAR EXPRESSIONS REGEX OSV..
   return (
     <>
       <Heading title="Please fill out the form below" />
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label></Form.Label>
+          <Form.Control
+            type="text"
+            name="title"
+            ref={register}
+            placeholder="Subject Title"
+          />
           <Form.Control
             type="name"
             name="name"
@@ -87,7 +90,7 @@ export default function Contact() {
           {errors.message && <span>{errors.message.message}</span>}
         </Form.Group>
         <Button type="submit">Submit</Button>
-      </Form>
+      </form>
     </>
   );
 }

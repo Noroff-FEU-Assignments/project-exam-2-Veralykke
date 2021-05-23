@@ -1,3 +1,9 @@
-export const BASE_URL = "http://verakaasen.com/holidaze/";
-export const BASE_API = BASE_URL + "wp-json/wp/v2/";
-export const TOKEN_PATH = "wp-json/jwt-auth/v1/token";
+export const BASE_URL = "https://warm-mesa-78773.herokuapp.com/"; //"http://verakaasen.com/holidaze/"; //https://warm-mesa-78773.herokuapp.com/
+export const BASE_API = BASE_URL;
+export const TOKEN_PATH = "auth/local";
+export const HOTELS = "hotels";
+export const CONTACT = "contact";
+export const ENQUIRY = "enquiries";
+//Hotels:  hotels
+//Contact:  contact
+//Enquirieres: enquirie

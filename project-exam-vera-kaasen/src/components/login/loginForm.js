@@ -28,15 +28,18 @@ export default function LoginForm() {
 
   const [auth, setAuth] = useContext(AuthContext);
 
-  async function onSubmit(data) {
+  async function onSubmit(e) {
     setSubmitting(true);
     setLoginError(null);
 
+    const data = {
+      identifier: e.username,
+      password: e.password,
+    };
 
     try {
       const response = await axios.post(url, data);
-      console.log("response", response.data);
-      setAuth(response.data);
+      localStorage.setItem("jwt", response.data.jwt);
       history.push("/adminPage");
     } catch (error) {
       console.log("error", error);
@@ -51,18 +54,28 @@ export default function LoginForm() {
       <form onSubmit={handleSubmit(onSubmit)}>
         {loginError && <FormError>{loginError}</FormError>}
         <fieldset disabled={submitting}>
+          <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Label></Form.Label>
+            <Form.Control
+              className="login"
+              name="username"
+              type="username"
+              ref={register}
+              placeholder="*Username"
+            />
+            {errors.username && <span>{errors.username.message}</span>}
+          </Form.Group>
 
-        <Form.Group controlId="exampleForm.ControlInput1">
-          <Form.Label></Form.Label>
-          <Form.Control className="login" type="username" ref={register} placeholder="*Username" />
-          {errors.username && <span>{errors.username.message}</span>}
-        </Form.Group>
-
-        <Form.Group controlId="exampleForm.ControlInput1">
-          <Form.Label></Form.Label>
-          <Form.Control type="password" ref={register} placeholder="*Password" />
-          {errors.password && <span>{errors.password.message}</span>}
-        </Form.Group>
+          <Form.Group controlId="exampleForm.ControlInput1">
+            <Form.Label></Form.Label>
+            <Form.Control
+              type="password"
+              name="password"
+              ref={register}
+              placeholder="*Password"
+            />
+            {errors.password && <span>{errors.password.message}</span>}
+          </Form.Group>
 
           {/*<div className="login">
             <input className="login" name="username" placeholder="Username" ref={register} />
@@ -77,19 +90,18 @@ export default function LoginForm() {
               ref={register}
               type="password"
             />
+
             {errors.password && (
               <FormError>{errors.password.message}</FormError>
             )}
             </div>*/}
-        <Button variant="primary" type="submit">
-         Log in
-        </Button>
+
           {/*<button>={"ubmitting" ? "Loggin In..." : "Login"}</button>*/}
+          <Button variant="primary" type="submit">
+            Log in
+          </Button>
         </fieldset>
       </form>
     </>
   );
 }
-
-
-

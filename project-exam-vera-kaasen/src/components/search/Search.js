@@ -18,7 +18,7 @@ export default function Search() {
         onChange={(e) => {
           setSearch(e.target.value);
         }}
-        className="mr-sm-2"
+        className="searchbar"
       />
       <HotelList search={search} />
     </div>

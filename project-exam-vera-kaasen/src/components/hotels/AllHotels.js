@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BASE_API } from "../../constants/api.js";
+import { BASE_API, HOTELS } from "../../constants/api.js";
 import HotelItem from "./HotelItem";
 import { Card, CardColumns } from "react-bootstrap";
 
@@ -8,7 +8,7 @@ function AllHotels() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const allPagesURL = BASE_API + "hotel_info";
+  const allPagesURL = BASE_API + HOTELS;
 
   useEffect(function () {
     async function fetchData() {
@@ -44,24 +44,18 @@ function AllHotels() {
         <Card.Text>
           <div className="hotels">
             {hotels.map(function (hotel) {
-              const {
-                id,
-                title,
-                content,
-                guests,
-                price,
-                better_featured_image,
-              } = hotel;
+              const { id, title, description, guests, price, image_url } =
+                hotel;
               return (
                 <Card.Title>
                   <HotelItem
                     key={id}
                     id={id}
-                    slug={title.rendered}
-                    excerpt={content.rendered}
+                    slug={title}
+                    excerpt={description}
                     guests={guests}
                     price={price}
-                    image={better_featured_image.source_url}
+                    image={image_url}
                   />
                 </Card.Title>
               );

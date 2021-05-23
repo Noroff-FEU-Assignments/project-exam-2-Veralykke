@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import { BASE_API } from "../../constants/api.js";
+import { BASE_API, HOTELS } from "../../constants/api.js";
 import HotelItemDetail from "./HotelItemDetail";
 import { Card, Button, CardColumns } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ function HotelDetail() {
   //const singlePageURL = BASE_API  + `page/${id}`
 
   const { id } = useParams();
-  const singlePageURL = BASE_API + "" + `hotel_info/${id}`;
+  const singlePageURL = BASE_API + HOTELS + `/${id}`;
   let history = useHistory();
   if (!id) {
     history.push("/");
@@ -54,9 +54,11 @@ function HotelDetail() {
       <HotelItemDetail
         key={hotel.id}
         id={hotel.id}
-        slug={hotel.title.rendered}
-        excerpt={hotel.content.rendered}
-        image={hotel.better_featured_image.source_url}
+        guests={hotel.guests}
+        price={hotel.price}
+        slug={hotel.title}
+        excerpt={hotel.description}
+        image={hotel.image_url}
       />
     </>
   );
