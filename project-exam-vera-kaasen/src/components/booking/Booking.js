@@ -35,7 +35,7 @@ export default function Booking() {
     });
     console.log(response.data);
   }
-nte 
+
   console.log(errors);
 
   //NB: MÅ HUSKE LEGGE TIL REGULAR EXPRESSIONS REGEX OSV..

@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import useAxios from "../hooks/useAxios";
 import axios from "axios";
+//import { Form, Col } from "react-bootstrap";
 const url = "";
 
 const schema = yup.object().shape({
@@ -47,19 +48,12 @@ export default function Contact() {
   }
   console.log(errors);
 
-  //NB: MÅ HUSKE LEGGE TIL REGULAR EXPRESSIONS REGEX OSV..
   return (
     <>
       <Heading title="Please fill out the form below" />
       <form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label></Form.Label>
-          <Form.Control
-            type="text"
-            name="title"
-            ref={register}
-            placeholder="Subject Title"
-          />
           <Form.Control
             type="name"
             name="name"
