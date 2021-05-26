@@ -6,6 +6,7 @@
     top: 16%;
     font-size: 1.3rem !important;
     font-family:$font-secondary;
+    text-align: center;
 }
 .search {
     display: flex;
@@ -47,7 +48,9 @@
     margin-left: 45px !important;
     margin-top: 45px !important;
 }
-
+.text-home {
+    margin-top: 80px;
+}
 @media screen and (min-width: 992px) {
     .image-home {
         background-position-x: 0px;
