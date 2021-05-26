@@ -12,6 +12,11 @@ body {
   position: absolute !important;
 }
 
+/*
+@media (min-width: 1200px)
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 550px;
+}*/
 h1 {
   font-size: 1.6rem !important;
   margin: 4rem 0 2rem 0 !important;
@@ -35,6 +40,20 @@ h5 {
   letter-spacing: 6px;
   font-family: "Segoe UI thin";
   text-align: center;
+  font-weight: bold;
+}
+
+.h1-home {
+  margin-left: 18px !important;
+  color: #FFD651 !important;
+  margin-bottom: 450px;
+  z-index: 1;
+  top: 16%;
+  font-size: 1.3rem !important;
+  font-family: "Segoe UI thin";
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3px;
 }
 
 .social-container {
@@ -129,17 +148,6 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
   border: 0;
 }
 
-.h1-home {
-  margin-left: 18px !important;
-  color: #FFD651 !important;
-  margin-bottom: 450px;
-  z-index: 1;
-  top: 16%;
-  font-size: 1.3rem !important;
-  font-family: "Segoe UI thin";
-  text-align: center;
-}
-
 .search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,5 +217,9 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 
 .form-control {
   font-size: 0.8rem !important;
+}
+
+.title-forms {
+  color: #191919 !important;
 }
 /*# sourceMappingURL=style.css.map */

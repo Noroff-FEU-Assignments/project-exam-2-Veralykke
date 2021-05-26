@@ -50,7 +50,7 @@ export default function Contact() {
 
   return (
     <>
-      <Heading title="Please fill out the form below" />
+      <Heading className="title-forms" title="Please fill out the form below" />
       <form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label></Form.Label>

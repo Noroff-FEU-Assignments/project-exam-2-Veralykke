@@ -38,10 +38,9 @@ export default function Booking() {
 
   console.log(errors);
 
-  //NB: MÅ HUSKE LEGGE TIL REGULAR EXPRESSIONS REGEX OSV..
   return (
     <>
-      <Heading title="Please fill out the form below" />
+      <Heading className="title-forms" title="Please fill out the form below" />
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label>Name</Form.Label>
