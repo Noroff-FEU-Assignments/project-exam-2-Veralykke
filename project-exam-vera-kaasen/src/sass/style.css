@@ -13,29 +13,27 @@ body {
 }
 
 h1 {
-  font-size: 1.8rem !important;
+  font-size: 1.6rem !important;
   margin: 4rem 0 2rem 0 !important;
-}
-
-p {
-  color: #191919;
-}
-
-h5 {
-  color: #191919;
-}
-
-.txt-home {
-  color: #FCFCFC !important;
-  top: 27%;
-  z-index: 1;
-  margin: -4px 0px 24px 0px !important;
-}
-
-.txt-home-two {
   color: #FCFCFC !important;
   top: 30%;
   z-index: 1;
+}
+
+p,
+a,
+h5 {
+  color: #191919 !important;
+}
+
+.h3-home {
+  color: #FFD651 !important;
+  font-size: 2rem;
+  top: 27%;
+  z-index: 1;
+  margin: -4px 0px 24px 0px !important;
+  letter-spacing: 6px;
+  font-family: "Segoe UI thin";
 }
 
 .social-container {
@@ -113,12 +111,13 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 }
 
 .card-title.h5 {
-  margin-top: 80px !important;
+  margin-top: 44px !important;
   font-size: 1em  !important;
 }
 
 .one {
   margin-right: 20px;
+  margin-top: 16px;
 }
 
 .map {
@@ -131,10 +130,12 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 
 .h1-home {
   margin-left: 18px !important;
-  color: #FCFCFC !important;
+  color: #FFD651 !important;
   margin-bottom: 450px;
   z-index: 1;
   top: 16%;
+  font-size: 1.3rem !important;
+  font-family: "Segoe UI thin";
 }
 
 .search {
@@ -150,7 +151,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
 .searchbar {
   width: 40% !important;
   border-radius: 1rem !important;
-  border: 1.2px solid #FFD651 !important;
+  border: 1.8px solid #FFD651 !important;
   margin: 0 auto !important;
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;

@@ -1,9 +1,11 @@
 .h1-home {
     margin-left: 18px !important;
-    color:$colour-background !important;
+    color:$colour-ui-primary !important;
     margin-bottom: 450px;
     z-index: 1;
     top: 16%;
+    font-size: 1.3rem !important;
+    font-family:$font-secondary;
 }
 .search {
     display: flex;
@@ -12,7 +14,7 @@
 .searchbar {
     width: 40% !important;
     border-radius: 1rem !important;
-    border: 1.2px solid $colour-ui-primary !important;
+    border: 1.8px solid $colour-ui-primary !important;
     margin: 0 auto !important; 
     align-items: center !important;
     display: flex;

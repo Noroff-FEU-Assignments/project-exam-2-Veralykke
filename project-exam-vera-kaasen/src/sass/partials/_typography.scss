@@ -1,25 +1,25 @@
 h1 {
-    font-size: 1.8rem !important;
+    font-size: 1.6rem !important;
     margin: 4rem 0 2rem 0 !important;
-}
-
-p {
-    color: $colour-primary ;
-}
-h5 {
-  color:  $colour-primary
-}
-
-.txt-home {
-    color:$colour-background !important;
-    top: 27%;
-    z-index: 1;
-    margin: -4px 0px 24px 0px !important;
-
-
-}
-.txt-home-two {
     color:$colour-background !important;
     top: 30%;
     z-index: 1;
 }
+
+p,
+a,  
+h5 {
+    color: $colour-primary !important;
+}
+.h3-home {
+    color:$colour-ui-primary !important;
+    font-size: 2rem;
+    top: 27%;
+    z-index: 1;
+    margin: -4px 0px 24px 0px !important;
+    letter-spacing: 6px;
+    font-family:$font-secondary;
+}
+
+
+
