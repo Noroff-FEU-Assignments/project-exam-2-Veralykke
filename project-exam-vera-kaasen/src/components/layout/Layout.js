@@ -13,18 +13,14 @@ import HotelDetail from "../hotels/HotelDetail";
 import Contact from "../contact/Contact";
 import Booking from "../booking/Booking";
 import LoginPage from "../login/LoginPage";
-import { AuthProvider } from "../context/AuthContext";
 import AdminNav from "../admin/posts/AdminNav";
 import PostPage from "../admin/posts/PostPage";
 import AddPost from "../admin/posts/AddPost";
 import AdminPage from "../admin/AdminPage";
 
-//    <AuthProvider>    </AuthProvider>
-//<AdminNav />
-
 function Layout() {
   return (
-    <AuthProvider>
+   
       <Router>
         <Navbar bg="light" variant="light" expand="lg">
           <Navbar.Brand href="/">
@@ -53,7 +49,7 @@ function Layout() {
           </Switch>
         </Container>
       </Router>
-    </AuthProvider>
+
   );
 }
 

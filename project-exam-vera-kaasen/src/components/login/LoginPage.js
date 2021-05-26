@@ -1,5 +1,5 @@
 import Heading from "../layout/Heading";
-import LoginForm from "./LoginForm";
+import LoginForm from "./loginForm";
 import AdminNav from "../admin/posts/AdminNav";
 
 export default function LoginPage() {

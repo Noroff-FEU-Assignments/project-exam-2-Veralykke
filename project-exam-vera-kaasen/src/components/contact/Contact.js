@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
-import useAxios from "../hooks/useAxios";
 import axios from "axios";
 //import { Form, Col } from "react-bootstrap";
 const url = "";
@@ -24,18 +23,17 @@ const schema = yup.object().shape({
 export default function Contact() {
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState(null);
-  const http = useAxios();
+  const http = axios();
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
 
   async function onSubmit(data) {
-    setSubmitting(true);
+    console.log(data);
+    /*setSubmitting(true);
     setServerError(null);
 
     data.status = "publish";
-
-    console.log(data);
     try {
       const response = await http.post("/contact", data);
       console.log("response", response.data);
@@ -44,7 +42,7 @@ export default function Contact() {
       setServerError(error.toString());
     } finally {
       setSubmitting(false);
-    }
+    }*/
   }
   console.log(errors);
 
@@ -55,7 +53,7 @@ export default function Contact() {
         <Form.Group controlId="exampleForm.ControlInput1">
           <Form.Label></Form.Label>
           <Form.Control
-            type="name"
+            type="text"
             name="name"
             ref={register}
             placeholder="Full name"
