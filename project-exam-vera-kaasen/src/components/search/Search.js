@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import HotelList from "../hotels/HotelList";
-
 import { FormControl } from "react-bootstrap";
 
 export default function Search() {

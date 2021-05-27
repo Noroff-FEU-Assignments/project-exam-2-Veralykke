@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 import {
   Card,
   Button,
-  CardColumns,
-  Container,
-  Row,
-  Col,
 } from "react-bootstrap";
 
 function HotelItem({ id, slug, excerpt, guests, price, image }) {

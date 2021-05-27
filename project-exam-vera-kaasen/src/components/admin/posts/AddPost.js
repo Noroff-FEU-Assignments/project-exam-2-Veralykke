@@ -1,4 +1,4 @@
-import { useState } from "react";
+/*import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -11,9 +11,18 @@ import MediaDropdown from "./MediaDropdown";
 import AdminPage from "../AdminPage";
 
 const schema = yup.object().shape({
-  title: yup.string().required("Title is required"),
+  name: yup.string().required("Please enter hotel name")
+  descriptions: yup
+.string()
+.required("Please ass some description")
+.min(5, "descriptions should be at least 5 characters"),
+price: yup
+.number
+.required("Please add price per night")
+.positive()
+.integer(),
+type: yup.string()
 });
-
 export default function AddPost() {
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState(null);
@@ -34,7 +43,6 @@ export default function AddPost() {
     if (data.featured_media === "") {
       data.featured_media = null;
     }
-
     try {
       const response = await http.post("/enquiries", data);
       console.log("response", response.data);
@@ -54,17 +62,12 @@ export default function AddPost() {
         <fieldset disabled={submitting}>
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label></Form.Label>
-            <Form.Control type="name" ref={register} placeholder="*Name" />
+            <Form.Control type="name" ref={register} placeholder="* Name" />
             {errors.name && <span>{errors.name.message}</span>}
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label></Form.Label>
-            <Form.Control type="email" ref={register} placeholder="*Email" />
-            {errors.email && <span>{errors.email.message}</span>}
-          </Form.Group>
-          <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Label></Form.Label>
-            <Form.Control type="name" ref={register} placeholder="*Price" />
+            <Form.Control type="name" ref={register} placeholder="* Price" />
             {errors.title && <span>{errors.title.message}</span>}
           </Form.Group>{" "}
           <Form.Group controlId="exampleForm.ControlInput1">
@@ -72,18 +75,8 @@ export default function AddPost() {
             <Form.Control
               type="name"
               ref={register}
-              placeholder="*Max guests"
+              placeholder="* Guests"
             />
-            {errors.title && <span>{errors.title.message}</span>}
-          </Form.Group>
-          <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Label></Form.Label>
-            <Form.Control type="name" ref={register} placeholder="*Longitude" />
-            {errors.title && <span>{errors.title.message}</span>}
-          </Form.Group>
-          <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Label></Form.Label>
-            <Form.Control type="name" ref={register} placeholder="*Latitude" />
             {errors.title && <span>{errors.title.message}</span>}
           </Form.Group>
           <Form.Group controlId="exampleForm.ControlInput1">
@@ -91,7 +84,7 @@ export default function AddPost() {
             <Form.Control
               type="message"
               ref={register}
-              placeholder="*Description"
+              placeholder="* Description"
             />
             {errors.message && <span>{errors.message.message}</span>}
           </Form.Group>
@@ -105,3 +98,4 @@ export default function AddPost() {
     </AdminPage>
   );
 }
+*/

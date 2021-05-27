@@ -5,8 +5,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import axios from "axios";
-//import { Form, Col } from "react-bootstrap";
-const url = "";
+import { BASE_API, CONTACT } from "../../constants/api";
 
 const schema = yup.object().shape({
   name: yup.string().required("Please enter your name"),
@@ -23,13 +22,18 @@ const schema = yup.object().shape({
 export default function Contact() {
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState(null);
-  const http = axios();
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
 
   async function onSubmit(data) {
     console.log(data);
+
+    await axios.post(BASE_API + CONTACT, {
+      name: data.name,
+      email: data.email,
+      message: data.message,
+    });
     /*setSubmitting(true);
     setServerError(null);
 

@@ -1,7 +1,7 @@
 h1 {
     font-size: 1.6rem !important;
     margin: 4rem 0 2rem 0 !important;
-    color:$colour-background !important;
+    color:$colour-primary !important;
     top: 30%;
     z-index: 1;
 }
@@ -15,22 +15,25 @@ h5 {
     font-size: 2rem;
     top: 27%;
     z-index: 1;
-    margin: -4px 0px 24px 0px !important;
+    
     letter-spacing: 6px;
     font-family:$font-secondary;
     text-align: center;
     font-weight: bold;
+ 
 }
 .h1-home {
     margin-left: 18px !important;
     color:$colour-ui-primary !important;
-    margin-bottom: 450px;
+    top: 50%;
+    margin-top:45px;
     z-index: 1;
-    top: 16%;
+  
     font-size: 1.3rem !important;
     font-family:$font-secondary;
     text-align: center;
     font-weight: bold;
     letter-spacing: 3px;
+    
 }
 

@@ -7,7 +7,7 @@ function HotelList({ search }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const allPagesURL = BASE_API + "hotel_info";
+  const allPagesURL = BASE_API + "hotels";
 
   useEffect(function () {
     async function fetchData() {
