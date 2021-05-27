@@ -31,7 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "mirrorGit": "git push --mirror https://github.com/Veralykke/holidaze-exam-public.git"
   },
   "eslintConfig": {
     "extends": [
