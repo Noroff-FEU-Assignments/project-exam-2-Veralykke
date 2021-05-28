@@ -18,7 +18,7 @@ export default function AdminPage({ children }) {
 
   return (
     <>
-      
+      <AdminNav />
       <Heading title="Holidaze Admin" />
 
       <h2>Messages</h2>
