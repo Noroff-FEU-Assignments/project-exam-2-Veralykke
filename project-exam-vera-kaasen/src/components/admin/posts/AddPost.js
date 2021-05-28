@@ -54,13 +54,10 @@ export default function AddPost() {
       }
     );
   }
-  /* addHotel();
 
-    {
-      /*setSubmitting(true);
-    setServerError(null);
-    }
 
+    
+/*
     data.status = "publish";
 
     if (data.featured_media === "") {

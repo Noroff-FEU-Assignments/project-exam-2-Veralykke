@@ -12,15 +12,3 @@ export default function AdmindMenu() {
   );
 }
 
-/*
-export default function AdmindMenu() {
-  return (
-    <nav className="admin">
-<ListGroup variant="flush">
-  < ListGroup.Item action href="/admin/posts">Messages</ListGroup.Item>
-  <ListGroup.Item action href="/admin/posts">Booking</ListGroup.Item>
-  <ListGroup.Item action href="/Admin/posts/add">Create New Establishments</ListGroup.Item>
-</ListGroup>
-    </nav>
-  );
-}*/
