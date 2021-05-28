@@ -55,8 +55,6 @@ export default function AddPost() {
     );
   }
 
-
-    
 /*
     data.status = "publish";
 
