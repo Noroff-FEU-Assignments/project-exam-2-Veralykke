@@ -1,4 +1,4 @@
-/*import { useState } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -11,13 +11,13 @@ import MediaDropdown from "./MediaDropdown";
 import AdminPage from "../AdminPage";
 
 const schema = yup.object().shape({
-  name: yup.string().required("Please enter hotel name")
+  name: yup.string().required("Please enter hotel name"),
   descriptions: yup
 .string()
 .required("Please ass some description")
 .min(5, "descriptions should be at least 5 characters"),
 price: yup
-.number
+.number()
 .required("Please add price per night")
 .positive()
 .integer(),
@@ -30,7 +30,8 @@ export default function AddPost() {
   const history = useHistory();
   const http = useAxios();
 
-  const { register, handleSubmit, errors } = useForm({
+  const { 
+    register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
 
@@ -44,7 +45,7 @@ export default function AddPost() {
       data.featured_media = null;
     }
     try {
-      const response = await http.post("/enquiries", data);
+      const response = await axios("/", data);
       console.log("response", response.data);
     } catch (error) {
       console.log("error", error);
@@ -98,4 +99,3 @@ export default function AddPost() {
     </AdminPage>
   );
 }
-*/

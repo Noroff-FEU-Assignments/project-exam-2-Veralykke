@@ -1,21 +1,24 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import { BASE_API, CONTACT } from "../../../constants/api.js";
 import axios from "axios";
+import AuthContext from "../../context/AuthContext";
 
 export default function PostContact() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [auth,setAuth] = useContext(AuthContext);
 
   useEffect(function () {
     async function fetchData() {
+      const token = auth.jwt;
       try {
         axios
           .get(BASE_API + CONTACT, {
             headers: {
-              Authorization: "Bearer " + localStorage.getItem("jwt"),
+              Authorization: `Bearer ${token}`,
             },
           })
           .then((response) => {
@@ -33,7 +36,7 @@ export default function PostContact() {
     }
     fetchData();
   }, []);
-
+console.log("auth")
   if (loading) {
     return <div>Loading...</div>;
   }

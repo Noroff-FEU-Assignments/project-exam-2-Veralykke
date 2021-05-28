@@ -36,6 +36,7 @@ function Layout() {
       </Navbar>
       <Container>
         <Switch>
+          <Route path="/adminnav" component={AdminNav} />
           <Route path="/" exact component={Home} />
           <Route path="/hotels" component={AllHotels} />
           <Route path="/hotel/:id" component={HotelDetail} />

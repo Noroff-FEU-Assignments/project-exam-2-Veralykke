@@ -39,7 +39,8 @@ export default function LoginForm() {
 
     try {
       const response = await axios.post(url, data);
-      localStorage.setItem("jwt", response.data.jwt);
+      {/*localStorage.setItem("jwt", response.data.jwt);*/}
+      setAuth(response.data);
       history.push("/adminPage");
     } catch (error) {
       console.log("error", error);
