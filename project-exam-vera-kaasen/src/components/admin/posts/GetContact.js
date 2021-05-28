@@ -36,7 +36,7 @@ export default function PostContact() {
     }
     fetchData();
   }, []);
-console.log("auth")
+
   if (loading) {
     return <div>Loading...</div>;
   }
