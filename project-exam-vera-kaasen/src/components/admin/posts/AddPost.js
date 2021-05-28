@@ -9,6 +9,9 @@ import Heading from "../../layout/Heading";
 import { Form, Button } from "react-bootstrap";
 import MediaDropdown from "./MediaDropdown";
 import AdminPage from "../AdminPage";
+import { BASE_URL, HOTELS } from "../../../constants/api";
+
+const url= BASE_URL + HOTELS;
 
 const schema = yup.object().shape({
   name: yup.string().required("Please enter hotel name"),
@@ -36,6 +39,16 @@ export default function AddPost() {
   });
 
   async function onSubmit(data) {
+    async function addHotel() {
+      await axios.post(
+        url,
+        {
+          name: data.name,
+          message: data.message,
+           
+        }
+      )
+    }
     setSubmitting(true);
     setServerError(null);
 
