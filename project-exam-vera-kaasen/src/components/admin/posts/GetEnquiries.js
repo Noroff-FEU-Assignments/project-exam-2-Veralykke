@@ -47,7 +47,7 @@ export default function GetEnquiries() {
       <Card.Body>
         <ul>
           {posts.map((post) => {
-            return <li key={post.id}>{post.name}</li>;
+            return <li key={post.id}>{post.name}<hr></hr>{post.email}<hr></hr>{post.message}<hr></hr>{post.date}</li>;
           })}
         </ul>
       </Card.Body>

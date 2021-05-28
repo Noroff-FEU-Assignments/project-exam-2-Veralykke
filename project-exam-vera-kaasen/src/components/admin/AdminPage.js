@@ -10,12 +10,13 @@ export default function AdminPage({ children }) {
       <AdminNav />
       <Heading title="Holidaze Admin" />
 
-      <h2>Contact Messages:</h2>
+      <h2>Messages</h2>
       <GetContact />
 
-      <h2>Enquirieres:</h2>
+      <h2>Enquirieres</h2>
       <GetEnquiries />
 
+      <h2>Create new hotel</h2>
       <AdminMenu />
       {children ? children : <p></p>}
     </>

@@ -47,7 +47,7 @@ export default function PostContact() {
       <Card.Body>
         <ul>
           {posts.map((post) => {
-            return <li key={post.id}>{post.name}</li>;
+            return <li key={post.id}>{post.name} <hr></hr>{post.email}<hr></hr>{post.message}</li>
           })}
         </ul>
       </Card.Body>
