@@ -40,7 +40,7 @@ function HotelList({ search }) {
     search.length === 0
       ? []
       : hotels.filter((hotel) =>
-          hotel.slug.toLowerCase().includes(search.toLowerCase())
+          hotel.title.toLowerCase().includes(search.toLowerCase())
         );
 
   return (
@@ -49,8 +49,8 @@ function HotelList({ search }) {
         {filteredHotels.map(function (hotel) {
           const { id } = hotel;
           return (
-            <Link to={`/hotel/${id}`}>
-              <h5>{hotel.title.rendered}</h5>
+            <Link to={`/hotels/${id}`}>
+              <h5>{hotel.title}</h5>
             </Link>
           );
         })}
@@ -60,3 +60,6 @@ function HotelList({ search }) {
 }
 
 export default HotelList;
+
+
+////tatt vekk slug
