@@ -1,5 +1,4 @@
 import { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
 import axios from "axios";
 import { BASE_API, ENQUIRY } from "../../../constants/api.js";

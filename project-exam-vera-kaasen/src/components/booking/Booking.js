@@ -21,7 +21,7 @@ const schema = yup.object().shape({
 });
 
 export default function Booking() {
-  //const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date());
   const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
@@ -31,7 +31,7 @@ export default function Booking() {
       name: data.name,
       email: data.email,
       message: data.message,
-      date_start: data.dob,
+      date_start: data.date,
     });
     console.log(response.data);
   }

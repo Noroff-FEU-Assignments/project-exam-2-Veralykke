@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import FormError from "../common/FormError";
 import { BASE_URL, TOKEN_PATH } from "../../constants/api";
-import { Button, Form, FormControl, FormGroup } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import AuthContext from "../context/AuthContext";
 
 const url = BASE_URL + TOKEN_PATH;

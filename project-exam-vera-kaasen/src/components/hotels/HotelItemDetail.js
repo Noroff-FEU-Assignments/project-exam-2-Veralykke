@@ -1,13 +1,8 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-
 import {
   Card,
   Button,
-  CardColumns,
-  Container,
-  Row,
-  Col,
 } from "react-bootstrap";
 import MapBergen from "../map/MapBergen";
 
