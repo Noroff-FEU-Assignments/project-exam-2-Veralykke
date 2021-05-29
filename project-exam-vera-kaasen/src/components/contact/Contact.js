@@ -34,19 +34,19 @@ export default function Contact() {
       email: data.email,
       message: data.message,
     });
-    /*setSubmitting(true);
+    setSubmitting(true);
     setServerError(null);
 
     data.status = "publish";
     try {
-      const response = await http.post("/contact", data);
+      const response = await axios("/contacts", data);
       console.log("response", response.data);
     } catch (error) {
       console.log("error", error);
       setServerError(error.toString());
     } finally {
       setSubmitting(false);
-    }*/
+    }
   }
   console.log(errors);
 

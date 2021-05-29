@@ -8,7 +8,7 @@ export default function PostContact() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [auth,setAuth] = useContext(AuthContext);
+  const [auth] = useContext(AuthContext);
 
   useEffect(function () {
     async function fetchData() {
@@ -49,7 +49,7 @@ export default function PostContact() {
       <Card.Body>
         <ul>
           {posts.map((post) => {
-            return <li key={post.id}>{post.name} <hr></hr>{post.email}<hr></hr>{post.message}</li>
+            return <li key={post.id}><hr></hr>{post.name}<hr></hr>{post.email}<hr></hr>{post.message}</li>
           })}
         </ul>
       </Card.Body>
