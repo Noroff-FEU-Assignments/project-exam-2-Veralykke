@@ -34,11 +34,9 @@ export default function Booking() {
       message: data.message,
       date_start: data.date,
     });
-    
-    console.log(response.data);
   }
 
-  console.log(errors);
+  
 
   return (
     <>
