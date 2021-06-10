@@ -39,7 +39,6 @@ export default function LoginForm() {
 
     try {
       const response = await axios.post(url, data);
-      {/*localStorage.setItem("jwt", response.data.jwt);*/}
       setAuth(response.data);
       history.push("/adminPage");
     } catch (error) {
@@ -78,26 +77,7 @@ export default function LoginForm() {
             {errors.password && <span>{errors.password.message}</span>}
           </Form.Group>
 
-          {/*<div className="login">
-            <input className="login" name="username" placeholder="Username" ref={register} />
-            {errors.username && (
-              <FormError>{errors.username.message}</FormError>
-            )}
-          </div>
-          <div>
-            <input 
-              name="password"
-              placeholder="Password"
-              ref={register}
-              type="password"
-            />
-
-            {errors.password && (
-              <FormError>{errors.password.message}</FormError>
-            )}
-            </div>*/}
-
-          {/*<button>={"ubmitting" ? "Loggin In..." : "Login"}</button>*/}
+      
           <Button variant="primary" type="submit">
             Log in
           </Button>

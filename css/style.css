@@ -1,0 +1,221 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: #FCFCFC !important;
+  font-family: "Lato", sans-serif !important;
+  color: #191919 !important;
+  position: absolute !important;
+}
+
+/*
+@media (min-width: 1200px)
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 550px;
+}*/
+h1 {
+  font-size: 1.6rem !important;
+  margin: 4rem 0 2rem 0 !important;
+  color: #191919 !important;
+  top: 30%;
+  z-index: 1;
+}
+
+p,
+a,
+h5 {
+  color: #191919 !important;
+}
+
+.h3-home {
+  color: #FFD651;
+  font-size: 2.6rem;
+  top: 27%;
+  z-index: 1;
+  padding-top: 84px;
+  padding-bottom: 0px;
+  letter-spacing: 6px;
+  font-family: "Segoe UI thin";
+  text-align: center;
+  font-weight: bold;
+}
+
+.h1-home {
+  margin-left: 18px !important;
+  color: #FFD651 !important;
+  top: 50%;
+  z-index: 1;
+  font-size: 1.3rem !important;
+  font-family: "Segoe UI thin";
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.social-container {
+  background-color: #FCFCFC !important;
+  padding: 37px 50px;
+  text-align: center;
+  position: relative !important;
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-2px);
+}
+
+a.facebook,
+a.instagram,
+a.twitter,
+a.nav-link {
+  color: #191919;
+}
+
+.link-footer {
+  margin: 1rem !important;
+  padding: 25px;
+}
+
+button {
+  background: #FFD651 !important;
+  border: #FFD651 !important;
+  color: #191919 !important;
+  padding: 4px 16px !important;
+}
+
+button.navbar-toggler.collapsed {
+  background: #FCFCFC !important;
+}
+
+button.navbar-toggler {
+  background: #FCFCFC !important;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  background: #FCFCFC !important;
+}
+
+#logo {
+  height: 28px;
+  width: auto;
+}
+
+.card {
+  border-radius: 1.25rem !important;
+  margin-top: 65px;
+}
+
+.card .card-img, .card .card-img-top {
+  border-top-left-radius: calc(1.25rem - 1px) !important;
+  border-top-right-radius: calc(1.25rem - 1px) !important;
+}
+
+.card-info {
+  border: 1px solid rgba(29, 27, 27, 0.442) !important;
+  padding: 6px 8px 6px 8px !important;
+  color: rgba(29, 27, 27, 0.442) !important;
+  border-radius: 5px !important;
+}
+
+.card-title.h5 {
+  margin-top: 44px !important;
+  font-size: 1em  !important;
+}
+
+.one {
+  margin-right: 20px;
+  margin-top: 16px;
+}
+
+.map {
+  padding: 28px 0px 28px 0px;
+  width: 100%;
+  height: auto;
+  left: 0px;
+  border: 0;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchbar {
+  width: 40% !important;
+  border-radius: 1rem !important;
+  border: 1.8px solid #FFD651 !important;
+  margin: 0 auto !important;
+  align-items: center !important;
+  display: flex;
+  margin-top: 100px;
+  top: 38%;
+  left: 38%;
+  z-index: 1;
+}
+
+.search .hotels {
+  border-radius: 0.8rem !important;
+  background-color: white;
+  width: 28% !important;
+  margin: 0 auto !important;
+  align-items: center !important;
+}
+
+.search .hotels a h5 {
+  color: black !important;
+}
+
+.image-home {
+  background-image: url("https://images.unsplash.com/photo-1581000062376-936bff7c54d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+  width: 100%;
+  height: 35rem;
+  background-repeat: no-repeat;
+  background-position-x: -69px;
+  background-position-y: -41px;
+  max-width: 1079px;
+}
+
+.box-home {
+  margin-left: 45px !important;
+  margin-top: 45px !important;
+}
+
+.text-home {
+  margin-top: 80px;
+}
+
+@media screen and (min-width: 992px) {
+  .image-home {
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+}
+
+.form-control {
+  font-size: 0.8rem !important;
+}
+
+.title-forms {
+  color: #191919 !important;
+}
+
+.adminText {
+  font-size: 1.8em !important;
+}
+
+h2 {
+  font-size: 1.4em !important;
+}
+
+button {
+  border-radius: 5px !important;
+}
